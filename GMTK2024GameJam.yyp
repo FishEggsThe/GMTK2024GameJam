@@ -36,6 +36,7 @@
   },
   "name":"GMTK2024GameJam",
   "resources":[
+    {"id":{"name":"BallSquashNStretch","path":"animcurves/BallSquashNStretch/BallSquashNStretch.yy",},},
     {"id":{"name":"Obj_Ball","path":"objects/Obj_Ball/Obj_Ball.yy",},},
     {"id":{"name":"Obj_Border","path":"objects/Obj_Border/Obj_Border.yy",},},
     {"id":{"name":"Obj_Control","path":"objects/Obj_Control/Obj_Control.yy",},},

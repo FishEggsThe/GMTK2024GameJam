@@ -1,5 +1,5 @@
-function DrawBall(_type, _tier = tier,  _xPos = x, _yPos = y) {
-	draw_sprite_ext(global.ballSprites[_tier-1], _type, _xPos, _yPos, 1, 1, 0, c_white, 1)
+function DrawBall(_type, _size = [1, 1], _tier = tier,  _xPos = x, _yPos = y) {
+	draw_sprite_ext(global.ballSprites[_tier-1], _type, _xPos, _yPos, _size[0], _size[1], 0, c_white, 1)
 }
 
 function ResetBounced() {
@@ -53,7 +53,10 @@ function MergeBalls(_ball, _targetBall) {
 	
 	if _targetBall.tier >= 3
 		ExplodeBall(_targetBall)
-	else {_targetBall.mask_index = global.ballSprites[tier-1]}
+	else {
+		_targetBall.mask_index = global.ballSprites[tier-1]
+		_targetBall.squashPercent = 0
+	}
 	
 }
 
