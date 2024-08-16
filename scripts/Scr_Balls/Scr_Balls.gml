@@ -47,6 +47,8 @@ function MoveBall() {
 
 function MergeBalls(_ball, _targetBall) {
 	_targetBall.tier += _ball.tier
+	_targetBall.moveAngle = _ball.moveAngle
+	_targetBall.moveSpeed = _ball.moveSpeed/4
 	instance_destroy(_ball)
 	
 	if _targetBall.tier >= 3
