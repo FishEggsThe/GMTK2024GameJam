@@ -1,3 +1,5 @@
+global.debug = false
+
 global.ballSprites = [chives, chives, chives]
 global.ballSymbols = [chives, chives, chives]
 global.numOfBallTypes = array_length(global.ballSprites)

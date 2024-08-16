@@ -4,6 +4,8 @@ function ShootBall(_type, _angle) {
 		moveAngle = _angle
 		var dist = point_distance(x, y, mouse_x, mouse_y)
 		moveSpeed = sqrt(2*moveFriction*dist)
+		
+		if global.debug {moveSpeed = 30}
 	}
 	CycleQueue()
 }
