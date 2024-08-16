@@ -1,5 +1,5 @@
 function DrawBall(_type, _tier = tier,  _xPos = x, _yPos = y) {
-	draw_sprite_ext(global.ballSprites[_type], 0, _xPos, _yPos, _tier, _tier, _type*90, c_white, 1)
+	draw_sprite_ext(global.ballSprites[_tier-1], _type, _xPos, _yPos, 1, 1, 0, c_white, 1)
 }
 
 function ResetBounced() {
@@ -40,8 +40,7 @@ function MoveBall() {
 			moveSpeed /= weightRatio
 			moveAngle = ToucherAngle
 			ballTouched.moveAngle = ToucheeAngle
-			ResetBounced()
-			with ballTouched {ResetBounced()}
+			ResetBounced(); with ballTouched {ResetBounced()}
 		}
 	}
 }
@@ -49,11 +48,13 @@ function MoveBall() {
 function MergeBalls(_ball, _targetBall) {
 	_targetBall.tier += _ball.tier
 	instance_destroy(_ball)
-	if _targetBall.tier > 3
-		ExplodeBall(_ball)
+	
+	if _targetBall.tier >= 3
+		ExplodeBall(_targetBall)
+	else {_targetBall.mask_index = global.ballSprites[tier-1]}
 	
 }
 
 function ExplodeBall(_ball) {
-	
+	instance_destroy(_ball)
 }
