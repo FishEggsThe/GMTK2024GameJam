@@ -5,6 +5,7 @@ var shootInput = mouse_check_button_pressed(mb_left)
 shootAngle = point_direction(x, y, mouse_x, mouse_y)
 shootAngle = clamp(shootAngle, 0, 180)
 
+
 if shootInput {
 	 ShootBall(shootAngle)
 }
