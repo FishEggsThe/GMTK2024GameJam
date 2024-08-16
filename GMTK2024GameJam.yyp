@@ -34,7 +34,11 @@
   },
   "name":"GMTK2024GameJam",
   "resources":[
+    {"id":{"name":"Obj_Ball","path":"objects/Obj_Ball/Obj_Ball.yy",},},
+    {"id":{"name":"Obj_Shooter","path":"objects/Obj_Shooter/Obj_Shooter.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Scr_Balls","path":"scripts/Scr_Balls/Scr_Balls.yy",},},
+    {"id":{"name":"chives","path":"sprites/chives/chives.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
