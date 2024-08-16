@@ -8,9 +8,10 @@ if (mousePoint > 0 || mousePoint <= 180)
 	shootAngle = mousePoint
 
 if shootPressedInput {canPower = true}
-if canPower {shotPower += shotPowerMax/30}
+if canPower {shotPower += shotPowerMax/60}
 if ((shootReleaseInput && canPower) || shotPower >= shotPowerMax) {
-	 ShootBall(shotPower, ballQueue[0], shootAngle)
+	var trueShotPower = clamp(shotPower, shotPowerMin, shotPowerMax)
+	 ShootBall(trueShotPower, ballQueue[0], shootAngle)
 	 shotPower = 0
 	 canPower = false
 }

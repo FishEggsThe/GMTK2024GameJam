@@ -46,6 +46,7 @@
     {"id":{"name":"mockup","path":"sprites/mockup/mockup.yy",},},
     {"id":{"name":"Spr_Balls1","path":"sprites/Spr_Balls1/Spr_Balls1.yy",},},
     {"id":{"name":"Spr_Balls2","path":"sprites/Spr_Balls2/Spr_Balls2.yy",},},
+    {"id":{"name":"Spr_Balls3","path":"sprites/Spr_Balls3/Spr_Balls3.yy",},},
     {"id":{"name":"Spr_Wall","path":"sprites/Spr_Wall/Spr_Wall.yy",},},
   ],
   "resourceType":"GMProject",

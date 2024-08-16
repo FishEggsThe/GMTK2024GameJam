@@ -1,0 +1,1 @@
+if global.debug {draw_text_color(5, 5, "debug mode", c_lime, c_lime, c_green, c_green, 1)}

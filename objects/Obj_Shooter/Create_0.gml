@@ -3,7 +3,8 @@ y = room_height-30
 
 shootAngle = 90
 shotPower = 0
-shotPowerMax = 960
+shotPowerMax = 30
+shotPowerMin = 8
 canPower = false
 
 ballQueueSize = 3
