@@ -1,0 +1,1 @@
+global.ballSprites = [chives, chives, chives]

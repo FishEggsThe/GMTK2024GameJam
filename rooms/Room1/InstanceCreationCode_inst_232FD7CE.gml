@@ -1,0 +1,1 @@
+x = room_width; image_xscale = -1

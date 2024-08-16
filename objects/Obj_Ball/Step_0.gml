@@ -6,4 +6,4 @@ if moveSpeed > 0 {
 	y += ySpeed
 	
 	moveSpeed -= moveFriction
-} else {flying = false}
+} else {moveSpeed = 0; flying = false}
