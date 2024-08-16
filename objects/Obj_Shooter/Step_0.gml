@@ -7,5 +7,5 @@ shootAngle = clamp(shootAngle, 0, 180)
 
 
 if shootInput {
-	 ShootBall(shootAngle)
+	 ShootBall(ballQueue[0], shootAngle)
 }

@@ -1,6 +1,7 @@
-function ShootBall(angle) {
+function ShootBall(_type, _angle) {
 	with instance_create_layer(x, y, "Instances", Obj_Ball) {
-		moveAngle = angle
+		type = _type
+		moveAngle = _angle
 		var dist = point_distance(x, y, mouse_x, mouse_y)
 		moveSpeed = sqrt(2*moveFriction*dist)
 	}
@@ -8,6 +9,7 @@ function ShootBall(angle) {
 }
 
 function CycleQueue() {
-	for(var i = ballQueueSize-1; i >= 0; i--)
-		ballQueue[i] = 0
+	for(var i = 0; i < ballQueueSize-1; i++)
+		ballQueue[i] = ballQueue[i+1]
+	ballQueue[ballQueueSize-1] = irandom(global.numOfBallTypes-1)
 }
