@@ -1,8 +1,10 @@
-function ShootBall(_type, _angle) {
+function ShootBall(_speed, _type, _angle) {
 	with instance_create_layer(x, y, "Instances", Obj_Ball) {
 		type = _type
 		moveAngle = _angle
-		var dist = point_distance(x, y, mouse_x, mouse_y)
+		var xPos = x + cos(degtorad(moveAngle))*_speed
+		var yPos = y + sin(degtorad(moveAngle))*_speed
+		var dist = point_distance(x, y, xPos, yPos)
 		moveSpeed = sqrt(2*moveFriction*dist)
 		
 		if global.debug {moveSpeed = 30}

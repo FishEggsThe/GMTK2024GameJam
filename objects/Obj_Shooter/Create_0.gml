@@ -3,7 +3,8 @@ y = room_height-30
 
 shootAngle = 90
 shotPower = 0
-shotPowerMax = 20
+shotPowerMax = 960
+canPower = false
 
 ballQueueSize = 3
 ballQueue = array_create(ballQueueSize, 0)
