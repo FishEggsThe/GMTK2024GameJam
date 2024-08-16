@@ -5,4 +5,4 @@ flying = true
 
 moveAngle = 90
 moveSpeed = 30
-moveFriction = 1/60
+moveFriction = 1/3.5
