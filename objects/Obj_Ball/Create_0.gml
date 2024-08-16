@@ -1,6 +1,5 @@
 type = 0
-symbols = [chives]
-colors = [c_red]
+tier = 1
 flying = true
 
 moveAngle = 90
