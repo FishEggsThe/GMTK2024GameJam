@@ -10,6 +10,10 @@ function MoveBall() {
 		xSpeed *= -1
 		moveAngle = 180 - moveAngle
 	}
+	if place_meeting(x+xSpeed, y, Obj_Border) {
+		xSpeed *= -1
+		moveAngle = 180 - moveAngle
+	}
 	
 	x += xSpeed
 	y += ySpeed
@@ -23,8 +27,10 @@ function MoveBall() {
 		else {
 			var ToucherAngle = point_direction(ballTouched.x, ballTouched.y, x, y)
 			var ToucheeAngle = ToucherAngle-180
+			var weightRatio = tier / ballTouched.tier
 			
-			ballTouched.moveSpeed = moveSpeed
+			ballTouched.moveSpeed = moveSpeed*weightRatio
+			moveSpeed /= weightRatio
 			moveAngle = ToucherAngle
 			ballTouched.moveAngle = ToucheeAngle
 		}
