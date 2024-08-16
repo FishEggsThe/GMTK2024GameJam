@@ -42,6 +42,7 @@
     {"id":{"name":"Scr_Balls","path":"scripts/Scr_Balls/Scr_Balls.yy",},},
     {"id":{"name":"Scr_Shooter","path":"scripts/Scr_Shooter/Scr_Shooter.yy",},},
     {"id":{"name":"chives","path":"sprites/chives/chives.yy",},},
+    {"id":{"name":"mockup","path":"sprites/mockup/mockup.yy",},},
     {"id":{"name":"Spr_Wall","path":"sprites/Spr_Wall/Spr_Wall.yy",},},
   ],
   "resourceType":"GMProject",
