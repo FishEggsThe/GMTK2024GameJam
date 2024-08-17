@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"chives",
-    "path":"sprites/chives/chives.yy",
+    "name":"Spr_Shooter",
+    "path":"sprites/Spr_Shooter/Spr_Shooter.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,7 +1,7 @@
 var xPos = x - cos(degtorad(shootAngle))*alarm[0]
 var yPos = y + sin(degtorad(shootAngle))*alarm[0]
 draw_sprite_ext(Spr_PlayerArm, 0, xPos, yPos, 1, 1, shootAngle, c_white, 1)
-draw_self()
+draw_sprite(Spr_Shooter, image_index, x, y)
 
 //var length = 50
 //var xPoint = x+2*length*cos(degtorad(shootAngle))

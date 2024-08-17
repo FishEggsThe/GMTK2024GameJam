@@ -1,5 +1,5 @@
 rotate += rotateInc
-draw_sprite_ext(bodySprite, 0, x, y, 1, 1, rotate*sin(degtorad(rotate*4)), c_white, 1)
+draw_sprite_ext(bodySprite, bodyIndex, x, y, 1, 1, rotate*sin(degtorad(rotate*4)), c_white, 1)
 
 var range = 14
 var xPos = x + clamp((Obj_Shooter.x-x)/17, -range, range)

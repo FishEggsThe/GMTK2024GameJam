@@ -1,5 +1,6 @@
+sprite = Spr_Shooter
 x = room_width/2
-y = room_height-30
+y = room_height-45
 
 shootAngle = 90
 shotPower = 0

@@ -1,4 +1,5 @@
-bodySprite = choose(Spr_EnemySquare, Spr_EnemyPentagon, Spr_EnemyHexagon)
+bodySprite = Spr_EnemyBody
+bodyIndex = irandom(2)
 
 hp = 3
 moveSpeed = 1
