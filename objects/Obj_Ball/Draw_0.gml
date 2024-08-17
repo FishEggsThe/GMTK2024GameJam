@@ -4,5 +4,12 @@ if squashPercent < 1 {
 		squash[i] = animcurve_channel_evaluate(curve[i], squashPercent)
 }
 
-DrawBall(type, squash)
+var xPos = x; var yPos = y
+if shudder > 0 {
+	xPos += random_range(-shudder, shudder)
+	yPos += random_range(-shudder, shudder)
+	shudder--
+}
+
+DrawBall(type, squash, tier, xPos, yPos)
  

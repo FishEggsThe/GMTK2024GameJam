@@ -9,6 +9,7 @@ moveFriction = 1/3.25
 timesBounced = 0
 xBounced = 1; yBounced = 1
 
+shudder = 0
 squash = [1, 1]
 squashPercent = 1
 squashPercentInc = 1/15
