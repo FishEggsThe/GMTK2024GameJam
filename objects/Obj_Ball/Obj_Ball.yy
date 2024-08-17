@@ -35,6 +35,9 @@
     "name":"chives",
     "path":"sprites/chives/chives.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"Spr_Balls1",
+    "path":"sprites/Spr_Balls1/Spr_Balls1.yy",
+  },
   "visible":true,
 }
