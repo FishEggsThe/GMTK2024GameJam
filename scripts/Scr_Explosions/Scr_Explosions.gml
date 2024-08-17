@@ -5,6 +5,7 @@ function CauseExplosion(_type, _tier){
 		blastDirectionsSize = array_length(blastDirections)
 		blastSize = sprite_get_width(global.ballSprites[_tier-1])-6
 		damage = _tier
+		AddScreenShake(damage*10)
 	}
 }
 
