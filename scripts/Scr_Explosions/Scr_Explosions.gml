@@ -53,8 +53,10 @@ function ExplosionCollision(_angle, _width = blastSize) {
 				enemy.hp -= damage
 		        if enemy.hp <= 0
 					instance_destroy(enemy)
-				else
-					ds_list_add(blacklist, enemy);
+				else {
+					ds_list_add(blacklist, enemy)
+					ds_list_add(blacklistPos, [enemy.x, enemy.y])
+				}
 			}
 	    }
 	}

@@ -21,3 +21,7 @@ for(var i = 0; i < blastDirectionsSize; i++) {
 		break
 	}
 }
+
+//for(var i = 0; i < ds_list_size(blacklistPos); i++) {
+//	draw_circle_color(blacklistPos[| i][0], blacklistPos[| i][1], 33, c_red, c_red, false)
+//}

@@ -5,6 +5,7 @@ alarm[0] = 45
 
 enemiesHit = ds_list_create()
 blacklist = ds_list_create()
+blacklistPos = ds_list_create()
 
 if !instance_exists(Obj_Sensor) {
 	instance_create_depth(0,0,0,Obj_Sensor)
