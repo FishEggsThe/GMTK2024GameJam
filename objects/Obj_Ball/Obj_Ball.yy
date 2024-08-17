@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"chives",
-    "path":"sprites/chives/chives.yy",
+    "name":"Spr_Balls1",
+    "path":"sprites/Spr_Balls1/Spr_Balls1.yy",
   },
   "spriteMaskId":{
     "name":"Spr_Balls1",

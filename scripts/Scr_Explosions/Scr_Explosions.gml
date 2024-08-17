@@ -49,14 +49,16 @@ function ExplosionCollision(_angle, _width = blastSize) {
 	if num > 0 {
 		for (var i = 0; i < num; ++i;) {
 			var enemy = enemiesHit[| i]
-			//show_debug_message(enemy)
+			
 			if (ds_list_find_index(blacklist, enemy) == -1) {
 				enemy.hp -= damage
-		        if enemy.hp <= 0
+				var enemyInfo = [enemy.x, enemy.y, enemy.points]
+				ds_list_add(blacklist, enemy)
+				ds_list_add(blacklistPos, enemyInfo)
+				
+		        if enemy.hp <= 0 {
+					AddScore(enemy.points, ds_list_find_index(blacklist, enemy))
 					instance_destroy(enemy)
-				else {
-					ds_list_add(blacklist, enemy)
-					ds_list_add(blacklistPos, [enemy.x, enemy.y])
 				}
 			}
 	    }

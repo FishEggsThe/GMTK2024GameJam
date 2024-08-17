@@ -1,0 +1,1 @@
+totalScore = 0
