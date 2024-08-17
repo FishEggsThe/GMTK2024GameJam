@@ -3,6 +3,7 @@ function CauseExplosion(_type, _tier){
 		blastDirections = DetermineExplosion(_type)
 		blastDirectionsSize = array_length(blastDirections)
 		blastSize = sprite_get_width(global.ballSprites[_tier-1])-6
+		damage = _tier
 	}
 }
 
@@ -34,23 +35,27 @@ function DetermineExplosion(_type){
 function ExplosionCollision(_angle, _width = blastSize) {
 	var sensor = Obj_Sensor
 	sensor.x = x; sensor.y = y
-	sensor.image_angle = 0
+	sensor.image_angle = _angle
 	sensor.image_xscale = room_height*2
 	sensor.image_yscale = blastSize / sprite_get_height(Spr_Sensor)
 	
-	var list = ds_list_create()
-	var num = 0
+	ds_list_clear(enemiesHit)
+	var num = 0; var explode = id
 	with (Obj_Sensor) {
-		num = instance_place_list(sensor.x, sensor.y, Obj_Enemy, list, false)
+		num = instance_place_list(sensor.x, sensor.y, Obj_Enemy, explode.enemiesHit, false)
 	}
-	show_debug_message(list)
-	show_debug_message(list[| 1])
 	
 	if num > 0 {
-		for (var i = 0; i < num; ++i;)
-	    {
-	        instance_destroy(list[| i]);
+		for (var i = 0; i < num; ++i;) {
+			var enemy = enemiesHit[| i]
+			//show_debug_message(enemy)
+			if (ds_list_find_index(blacklist, enemy) == -1) {
+				enemy.hp -= damage
+		        if enemy.hp <= 0
+					instance_destroy(enemy)
+				else
+					ds_list_add(blacklist, enemy);
+			}
 	    }
 	}
-	ds_list_destroy(list)
 }
