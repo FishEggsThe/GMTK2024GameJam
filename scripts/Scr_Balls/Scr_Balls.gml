@@ -8,9 +8,12 @@ function ResetBounced() {
 }
 
 function MoveBall() {
+	moveSpeed = clamp(moveSpeed, 0, maxMoveSpeed)
+	
 	var xSpeed =  moveSpeed*cos(degtorad(moveAngle))*xBounced
 	var ySpeed = -moveSpeed*sin(degtorad(moveAngle))*yBounced
 	
+	// Collisions with walls
 	if place_meeting(x+xSpeed, y, Obj_Border) {
 		xSpeed *= -1
 		xBounced *= -1
@@ -22,19 +25,16 @@ function MoveBall() {
 		//moveAngle = moveAngle - 180
 	}
 	
-	x += xSpeed
-	y += ySpeed
-	moveSpeed -= moveFriction
-	
-	var ballTouched = instance_place(x, y, Obj_Ball)
+	var ballTouched = instance_place(x+xSpeed, y+ySpeed, Obj_Ball)
 	if ballTouched != noone {
 		if type == ballTouched.type {
 			MergeBalls(id, ballTouched)
 		}
 		else {
+			//timesBounced++
 			var ToucherAngle = point_direction(ballTouched.x, ballTouched.y, x, y)
 			var ToucheeAngle = ToucherAngle-180
-			var weightRatio = tier / ballTouched.tier
+			var weightRatio = (tier / ballTouched.tier)// / timesBounced
 			
 			ballTouched.moveSpeed = moveSpeed*weightRatio
 			moveSpeed /= weightRatio
@@ -43,6 +43,10 @@ function MoveBall() {
 			ResetBounced(); with ballTouched {ResetBounced()}
 		}
 	}
+	
+	x += xSpeed
+	y += ySpeed
+	moveSpeed -= moveFriction
 }
 
 function MergeBalls(_ball, _targetBall) {
@@ -51,9 +55,10 @@ function MergeBalls(_ball, _targetBall) {
 	_targetBall.moveSpeed = _ball.moveSpeed/4
 	instance_destroy(_ball)
 	
-	if _targetBall.tier > global.numOfBallTiers
+	if _targetBall.tier > global.numOfBallTiers {
+		_targetBall.tier = 3
 		ExplodeBall(_targetBall)
-	else {
+	} else {
 		_targetBall.mask_index = global.ballSprites[tier-1]
 		_targetBall.squashPercent = 0
 	}
