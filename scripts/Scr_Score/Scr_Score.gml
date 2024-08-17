@@ -6,22 +6,45 @@ function AddScore(_points, spotCheck = 0, tier = 0){
 	Obj_ScoreSystem.totalScore += _points*multiplier
 }
 
-function DrawGregText(_string, _x, _y, _size = 1, _valign = fa_center, _halign = fa_middle) {
+function DrawGregText(_string, _x, _y, _size = 1, _halign = fa_left, _valign = fa_top) {
 	var trueString = ""
 	trueString = string(_string)
 	trueString = string_upper(trueString)
 	
 	var characterIndex = -1
 	var stringLength = string_length(trueString)
-	var xOffset = 0; var yOffset = 0
+	var setXOffset = 0
+	switch(_halign) {
+		//case fa_left:
+		//setXOffset = 0
+		//break
+		case fa_center:
+		setXOffset = -stringLength*global.fontWidth*_size/2
+		break
+		case fa_right:
+		setXOffset = -stringLength*global.fontWidth*_size
+		break
+	}
+	var xOffset = setXOffset
+	var yOffset = 0
+	switch(_valign) {
+		//case fa_top:
+		//yOffset = 0
+		//break
+		case fa_middle:
+		yOffset = -(global.fontHeight+3)*_size/2
+		break
+		case fa_bottom:
+		yOffset = -(global.fontHeight+3)*_size
+		break
+	}
 	
 	for(var i = 0; i < stringLength; i++) {
-		show_debug_message("String length is existing")
 		var character = string_copy(trueString, i+1, 1)
 		
 		if character == "\n" {
 			yOffset += (global.fontHeight+3)*_size
-			xOffset = 0
+			xOffset = setXOffset
 			continue
 		}
 			
