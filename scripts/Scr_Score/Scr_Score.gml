@@ -13,25 +13,32 @@ function DrawGregText(_string, _x, _y, _size = 1, _valign = fa_center, _halign =
 	
 	var characterIndex = -1
 	var stringLength = string_length(trueString)
-	var offset = 0
+	var xOffset = 0; var yOffset = 0
 	
 	for(var i = 0; i < stringLength; i++) {
 		show_debug_message("String length is existing")
 		var character = string_copy(trueString, i+1, 1)
+		if character == "\n" {
+			yOffset += (global.fontHeight+3)*_size
+			xOffset = 0
+			continue
+		}
+			
+		
+		characterIndex = -1
 		
 		for(var j = 0; j < global.containsLength; j++) {
-			show_debug_message("Contains length is ALSO existing")
 			var contain = string_copy(global.fontContains, j+1, 1)
-			show_debug_message(character + " " + contain)
 			if character == contain {
 				characterIndex = j
 				break
 			}
 		}
 		if characterIndex > -1 {
-			draw_sprite_ext(global.fontSprite, characterIndex, _x+offset, _y, _size, _size, 0, c_white, 1)
+			draw_sprite_ext(global.fontSprite, characterIndex, _x+xOffset, _y+yOffset, 
+							_size, _size, 0, c_white, 1)
 		}
-		offset += global.fontWidth*_size
+		xOffset += global.fontWidth*_size
 	}
 	
 }

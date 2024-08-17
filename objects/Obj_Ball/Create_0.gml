@@ -5,7 +5,7 @@ flying = true
 moveAngle = 90
 moveSpeed = 30
 maxMoveSpeed = 30
-moveFriction = 1/3.5
+moveFriction = 1/3.25
 timesBounced = 0
 xBounced = 1; yBounced = 1
 
