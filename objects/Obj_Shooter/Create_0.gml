@@ -5,7 +5,9 @@ shootAngle = 90
 shotPower = 0
 shotPowerMax = 30
 shotPowerMin = 8
+canShoot = true
 canPower = false
+shotDelay = 10
 
 ballQueueSize = 3
 ballQueue = array_create(ballQueueSize, 0)
