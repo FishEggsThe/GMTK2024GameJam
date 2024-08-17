@@ -1,1 +1,1 @@
-cursor_sprite = cursorSprite
+cursor_sprite = cursorSprites[cursorIndex]
