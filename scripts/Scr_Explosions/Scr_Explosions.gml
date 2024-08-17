@@ -39,7 +39,12 @@ function ExplosionCollision(_angle, _width = blastSize) {
 	sensor.image_yscale = blastSize / sprite_get_height(Spr_Sensor)
 	
 	var list = ds_list_create()
-	var num = instance_place_list(sensor.x, sensor.y, Obj_Enemy, list, false)
+	var num = 0
+	with (Obj_Sensor) {
+		num = instance_place_list(sensor.x, sensor.y, Obj_Enemy, list, false)
+	}
+	show_debug_message(list)
+	show_debug_message(list[| 1])
 	
 	if num > 0 {
 		for (var i = 0; i < num; ++i;)
@@ -47,4 +52,5 @@ function ExplosionCollision(_angle, _width = blastSize) {
 	        instance_destroy(list[| i]);
 	    }
 	}
+	ds_list_destroy(list)
 }
