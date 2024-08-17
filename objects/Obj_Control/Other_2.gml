@@ -11,3 +11,5 @@ global.fontContains = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,():;!?/'\"<>"
 global.containsLength = string_length(global.fontContains)
 
 image_alpha = 0.25
+
+window_set_cursor(cr_none)

@@ -1,0 +1,1 @@
+cursorSprite = Spr_Cursor
