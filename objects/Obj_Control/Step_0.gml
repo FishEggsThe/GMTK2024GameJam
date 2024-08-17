@@ -6,7 +6,7 @@ if keyboard_check_pressed(vk_enter) {
 }
 
 if global.debug {
-	if current_time % 5 == 0 {
+	if current_time % 10 == 0 {
 		var print = string(irandom(9)) + " "
 		print += string(position_meeting(mouse_x, mouse_y, Obj_Ball))
 		show_debug_message(print)
