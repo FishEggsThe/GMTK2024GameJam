@@ -1,6 +1,7 @@
 function CauseExplosion(_type, _tier){
 	with instance_create_layer(x, y, "Instances", Obj_Explosion) {
 		blastDirections = DetermineExplosion(_type)
+		blastDirectionsSize = array_length(blastDirections)
 		blastSize = sprite_get_width(global.ballSprites[_tier-1])-6
 	}
 }
@@ -28,4 +29,22 @@ function DetermineExplosion(_type){
 			break
 	}
 	return blastDir
+}
+
+function ExplosionCollision(_angle, _width = blastSize) {
+	var sensor = Obj_Sensor
+	sensor.x = x; sensor.y = y
+	sensor.image_angle = 0
+	sensor.image_xscale = room_height*2
+	sensor.image_yscale = blastSize / sprite_get_height(Spr_Sensor)
+	
+	var list = ds_list_create()
+	var num = instance_place_list(sensor.x, sensor.y, Obj_Enemy, list, false)
+	
+	if num > 0 {
+		for (var i = 0; i < num; ++i;)
+	    {
+	        instance_destroy(list[| i]);
+	    }
+	}
 }
