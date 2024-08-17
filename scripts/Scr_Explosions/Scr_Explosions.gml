@@ -41,6 +41,9 @@ function ExplosionCollision(_angle, _width = blastSize) {
 	sensor.image_xscale = room_height*2
 	sensor.image_yscale = blastSize / sprite_get_height(Spr_Sensor)
 	
+	var dmg = damage
+	with Obj_Ball { if (place_meeting(x, y, Obj_Sensor) && tier < dmg) {ExplodeBall()} }
+	
 	ds_list_clear(enemiesHit)
 	var num = 0; var explode = id
 	with (Obj_Sensor) {

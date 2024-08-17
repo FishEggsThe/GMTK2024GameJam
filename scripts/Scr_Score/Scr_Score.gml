@@ -18,15 +18,14 @@ function DrawGregText(_string, _x, _y, _size = 1, _valign = fa_center, _halign =
 	for(var i = 0; i < stringLength; i++) {
 		show_debug_message("String length is existing")
 		var character = string_copy(trueString, i+1, 1)
+		
 		if character == "\n" {
 			yOffset += (global.fontHeight+3)*_size
 			xOffset = 0
 			continue
 		}
 			
-		
 		characterIndex = -1
-		
 		for(var j = 0; j < global.containsLength; j++) {
 			var contain = string_copy(global.fontContains, j+1, 1)
 			if character == contain {

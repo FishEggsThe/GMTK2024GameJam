@@ -1,6 +1,7 @@
 blastDirections = []
 blastDirectionsSize = 0//array_length(blastDirections)
 blastSize = 0
+damage = 1
 alarmSet = 45
 alarm[0] = alarmSet
 
