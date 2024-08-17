@@ -10,6 +10,8 @@ canShoot = true
 canPower = false
 shotDelay = 10
 
+playerLives = 3
+
 ballQueueSize = 3
 ballQueue = array_create(ballQueueSize, 0)
 for(var i = 0; i < ballQueueSize; i++)

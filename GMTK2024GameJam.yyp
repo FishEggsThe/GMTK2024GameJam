@@ -58,6 +58,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Scr_Balls","path":"scripts/Scr_Balls/Scr_Balls.yy",},},
     {"id":{"name":"Scr_Camera","path":"scripts/Scr_Camera/Scr_Camera.yy",},},
+    {"id":{"name":"Scr_Enemy","path":"scripts/Scr_Enemy/Scr_Enemy.yy",},},
     {"id":{"name":"Scr_Explosions","path":"scripts/Scr_Explosions/Scr_Explosions.yy",},},
     {"id":{"name":"Scr_Score","path":"scripts/Scr_Score/Scr_Score.yy",},},
     {"id":{"name":"Scr_Shooter","path":"scripts/Scr_Shooter/Scr_Shooter.yy",},},

@@ -45,7 +45,7 @@ function ExplosionCollision(_angle, _width = blastSize) {
 	with Obj_Ball {
 		if place_meeting(x, y, Obj_Sensor) {
 			if tier < dmg {ExplodeBall()}
-			else {shudder = dmg*2}
+			else {shudder = dmg}
 		}
 	}
 	
