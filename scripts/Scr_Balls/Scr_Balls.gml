@@ -37,7 +37,8 @@ function MoveBall() {
 			var weightRatio = (tier / ballTouched.tier)// / timesBounced
 			
 			ballTouched.moveSpeed = moveSpeed*weightRatio
-			moveSpeed /= weightRatio
+			if 1-weightRatio == 0 {weightRatio--}
+			moveSpeed *= 1-weightRatio
 			moveAngle = ToucherAngle
 			ballTouched.moveAngle = ToucheeAngle
 			ResetBounced(); with ballTouched {ResetBounced()}
