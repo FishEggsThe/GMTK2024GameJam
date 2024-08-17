@@ -63,6 +63,7 @@
     {"id":{"name":"Spr_EnemyHexagon","path":"sprites/Spr_EnemyHexagon/Spr_EnemyHexagon.yy",},},
     {"id":{"name":"Spr_EnemyPentagon","path":"sprites/Spr_EnemyPentagon/Spr_EnemyPentagon.yy",},},
     {"id":{"name":"Spr_EnemySquare","path":"sprites/Spr_EnemySquare/Spr_EnemySquare.yy",},},
+    {"id":{"name":"Spr_PlayerArm","path":"sprites/Spr_PlayerArm/Spr_PlayerArm.yy",},},
     {"id":{"name":"Spr_Sensor","path":"sprites/Spr_Sensor/Spr_Sensor.yy",},},
     {"id":{"name":"Spr_Wall","path":"sprites/Spr_Wall/Spr_Wall.yy",},},
   ],
