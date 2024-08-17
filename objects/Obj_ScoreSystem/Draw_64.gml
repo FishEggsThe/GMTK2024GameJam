@@ -2,4 +2,4 @@
 //draw_set_valign(fa_top)
 //draw_text_transformed(5, 5, totalScore, 3, 3, 0)
 
-DrawGregText(totalScore, 5, 5)
+DrawGregText(totalScore, 5, 5, 3)

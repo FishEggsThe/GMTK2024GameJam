@@ -6,7 +6,7 @@ function AddScore(_points, spotCheck = 0, tier = 0){
 	Obj_ScoreSystem.totalScore += _points*multiplier
 }
 
-function DrawGregText(_string, _x, _y, _valign = fa_center, _halign = fa_middle) {
+function DrawGregText(_string, _x, _y, _size = 1, _valign = fa_center, _halign = fa_middle) {
 	var trueString = ""
 	trueString = string(_string)
 	trueString = string_upper(trueString)
@@ -29,9 +29,9 @@ function DrawGregText(_string, _x, _y, _valign = fa_center, _halign = fa_middle)
 			}
 		}
 		if characterIndex > -1 {
-			draw_sprite(global.fontSprite, characterIndex, _x+offset, _y)
+			draw_sprite_ext(global.fontSprite, characterIndex, _x+offset, _y, _size, _size, 0, c_white, 1)
 		}
-		offset += global.fontWidth
+		offset += global.fontWidth*_size
 	}
 	
 }
