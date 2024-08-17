@@ -1,12 +1,13 @@
-function CauseExplosion(type){
+function CauseExplosion(_type, _tier){
 	with instance_create_layer(x, y, "Instances", Obj_Explosion) {
-		blastDirections = DetermineExplosion(type)
+		blastDirections = DetermineExplosion(_type)
+		blastSize = sprite_get_width(global.ballSprites[_tier-1])-6
 	}
 }
 
-function DetermineExplosion(type){
+function DetermineExplosion(_type){
 	var blastDir = []
-	switch(type) {
+	switch(_type) {
 		case 0:
 			blastDir = ["vert", "hori"]
 			break

@@ -51,7 +51,7 @@ function MergeBalls(_ball, _targetBall) {
 	_targetBall.moveSpeed = _ball.moveSpeed/4
 	instance_destroy(_ball)
 	
-	if _targetBall.tier > 1//global.numOfBallTiers
+	if _targetBall.tier > global.numOfBallTiers
 		ExplodeBall(_targetBall)
 	else {
 		_targetBall.mask_index = global.ballSprites[tier-1]
@@ -60,7 +60,7 @@ function MergeBalls(_ball, _targetBall) {
 	
 }
 
-function ExplodeBall(_explodeBall) {
-	CauseExplosion(_explodeBall.type)
+function ExplodeBall(_explodeBall = id) {
+	CauseExplosion(_explodeBall.type, _explodeBall.tier)
 	instance_destroy(_explodeBall)
 }

@@ -1,2 +1,2 @@
-spawnRateSet = 30//120
+spawnRateSet = 120
 spawnRate = spawnRateSet
