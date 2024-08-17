@@ -1,6 +1,7 @@
 function CauseExplosion(_type, _tier){
 	with instance_create_layer(x, y, "Instances", Obj_Explosion) {
-		blastDirections = DetermineExplosion(_type)
+		blastType = _type
+		blastDirections = DetermineExplosion(blastType)
 		blastDirectionsSize = array_length(blastDirections)
 		blastSize = sprite_get_width(global.ballSprites[_tier-1])-6
 		damage = _tier
