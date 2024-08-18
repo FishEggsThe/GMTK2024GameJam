@@ -1,5 +1,5 @@
 function DrawExplosion() {
-	var superColor = 0
+	var totalColors = array_length(laserColor) - 1
 	for(var i = 0; i < 5; i++) {
 		for(var j = 0; j < blastDirectionsSize; j++) {
 			var rotation = 15
@@ -26,7 +26,8 @@ function DrawExplosion() {
 			}
 		
 			for (var face = -1; face <= 1; face+=2) {
-				draw_sprite_ext(laserSprite, i, x, y, room_width*face, laserWidth, rotation, laserColor, 1)
+				var pickColor = (i < 5-1 ? laserColor[irandom(totalColors)] : c_white)
+				draw_sprite_ext(laserSprite, i, x, y, room_width*face, laserWidth, rotation, pickColor, 1)
 			}
 		
 		}
@@ -50,31 +51,37 @@ function DetermineExplosion(_type){
 	switch(_type) {
 		case 0:
 			blastDir = ["vert", "hori"]
-			laserColor = c_green
+			laserColor[0] = #63AB3F
 			break
 		case 1:
 			blastDir = ["hori"]
-			laserColor = c_blue
+			laserColor[0] = #0098DB
 			break
 		case 2:
 			blastDir = ["vert"]
-			laserColor = c_red
+			laserColor[0] = #C00946
 			break
 		case 3:
 			blastDir = ["slash", "bslash"]
-			laserColor = c_yellow
+			laserColor[0] = #FFC200
 			break
 		case 4:
 			blastDir = ["bslash"]
-			laserColor = c_maroon
+			laserColor[0] = #9D5618
 			break
 		case 5:
 			blastDir = ["slash"]
-			laserColor = c_fuchsia
+			laserColor[0] = #FF5277 
 			break
 		case 6:
 			blastDir = ["vert", "hori", "slash", "bslash"]
-			laserColor = c_white
+			laserColor = array_create(6, c_white)
+			laserColor[0] = #63AB3F
+			laserColor[1] = #0098DB
+			laserColor[2] = #C00946
+			laserColor[3] = #FFC200
+			laserColor[4] = #9D5618
+			laserColor[5] = #FF5277 
 			break
 	}
 	return blastDir

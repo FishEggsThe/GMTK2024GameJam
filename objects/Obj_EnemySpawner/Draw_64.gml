@@ -3,7 +3,8 @@ if global.debug {
 	roundStats += "Spawn Rate: " + string(spawnRateSet/60) + "s.\n"
 	roundStats += "Max Spawn Amount: " + string(maxToSpawn) + "\n"
 	roundStats += "Wave Size: " + string(setNumToSpawn) + "\n"
-	roundStats += "Enemy Speed: " + string(setSetSpeed) + "\n\n"
+	roundStats += "Enemy Speed: " + string(setSetSpeed) + "\n"
+	roundStats += "Enemy Health: " + string(setHp) + "\n\n"
 	
 	roundStats += "Spawn Timer: " + string(spawnRate/60) + "s.\n"
 	roundStats += "Current Wave: " + string(numToSpawn)
