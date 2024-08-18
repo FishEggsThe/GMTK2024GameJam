@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Spr_EnemyHexagon",
-    "path":"sprites/Spr_EnemyHexagon/Spr_EnemyHexagon.yy",
+    "name":"Spr_EnemyBody",
+    "path":"sprites/Spr_EnemyBody/Spr_EnemyBody.yy",
   },
   "spriteMaskId":null,
   "visible":true,

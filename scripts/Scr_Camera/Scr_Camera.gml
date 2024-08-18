@@ -8,10 +8,3 @@ function AddScreenShake(_amount){
 function SetCursor(_index) {
 	Obj_Control.cursorIndex = _index
 }
-
-var i = 0
-for(var i = 0; i < 10; i++) {
-	i = 10
-}
-
-repeat(3){x=x}
