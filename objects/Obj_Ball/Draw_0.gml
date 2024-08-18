@@ -1,7 +1,10 @@
 if squashPercent < 1 {
 	squashPercent += squashPercentInc
-	for(var i = 0; i < 2; i++)
-		squash[i] = animcurve_channel_evaluate(curve[i], squashPercent)
+	for(var i = 0; i < 2; i++) {
+		var calcCurve = animcurve_channel_evaluate(curve[i], squashPercent)
+		calcCurve = lerp(calcCurve, 1, 1-squashAmount)
+		squash[i] = calcCurve
+	}
 }
 
 var xPos = x; var yPos = y

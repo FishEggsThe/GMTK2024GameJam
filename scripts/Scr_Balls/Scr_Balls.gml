@@ -14,6 +14,7 @@ function DrawBall(_type, _size = [1, 1], _tier = tier,  _xPos = x, _yPos = y, _f
 
 function SetBallSquish(_amount = 1,_ball = id) {
 	_ball.squashPercent = 0
+	_ball.squashAmount = _amount
 }
 
 function ResetBounced() {
