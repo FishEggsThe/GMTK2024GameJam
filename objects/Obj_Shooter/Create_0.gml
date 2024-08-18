@@ -12,6 +12,9 @@ canPower = false
 shotDelay = 5
 reversePower = false
 
+juice = 0
+maxJuice = 100
+
 playerLives = 3
 surprise = 0
 surpriseInc = 12/60

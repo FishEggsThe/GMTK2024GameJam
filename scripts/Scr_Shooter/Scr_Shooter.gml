@@ -17,3 +17,8 @@ function CycleQueue() {
 		ballQueue[i] = ballQueue[i+1]
 	ballQueue[ballQueueSize-1] = irandom(global.numOfBallTypes-1)
 }
+
+function AddJuice(_juice) {
+	Obj_Shooter.juice+=_juice*1.5
+	if Obj_Shooter.juice > Obj_Shooter.maxJuice {Obj_Shooter.juice = Obj_Shooter.maxJuice}
+}
