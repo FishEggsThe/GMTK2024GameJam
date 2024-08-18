@@ -13,3 +13,8 @@ if global.debug {
 		show_debug_message(print)
 	}
 }
+// Okay now you can look
+
+var toggleCursorInput = ord("F")
+var toggleCursorSize = keyboard_check_pressed(toggleCursorInput)
+if toggleCursorSize {cursorSizeType = 1-cursorSizeType}
