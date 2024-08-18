@@ -41,10 +41,10 @@ function CauseExplosion(_type, _tier){
 		blastDirections = DetermineExplosion(blastType)
 		blastDirectionsSize = array_length(blastDirections)
 		var trueTier = clamp(_tier, 1, 3)
-		blastSize = sprite_get_width(global.ballSprites[trueTier-1])*(1.25* (tier==global.numOfBallTiers))-6
+		blastSize = sprite_get_width(global.ballSprites[trueTier-1])*(_tier==global.numOfBallTiers ? 1.25 : 1)-6
 		laserWidth = blastSize / sprite_get_height(laserSprite)
 		damage = _tier + _tier-1
-		AddScreenShake(damage*10)
+		AddScreenShake(damage*8)
 	}
 }
 

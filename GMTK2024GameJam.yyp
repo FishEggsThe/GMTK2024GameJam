@@ -88,6 +88,8 @@
     {"id":{"name":"Spr_EnemyEyes","path":"sprites/Spr_EnemyEyes/Spr_EnemyEyes.yy",},},
     {"id":{"name":"Spr_Font","path":"sprites/Spr_Font/Spr_Font.yy",},},
     {"id":{"name":"spr_HitPart","path":"sprites/spr_HitPart/spr_HitPart.yy",},},
+    {"id":{"name":"Spr_Juice","path":"sprites/Spr_Juice/Spr_Juice.yy",},},
+    {"id":{"name":"Spr_JuiceMeter","path":"sprites/Spr_JuiceMeter/Spr_JuiceMeter.yy",},},
     {"id":{"name":"Spr_Laser","path":"sprites/Spr_Laser/Spr_Laser.yy",},},
     {"id":{"name":"Spr_LaserCenter","path":"sprites/Spr_LaserCenter/Spr_LaserCenter.yy",},},
     {"id":{"name":"Spr_Lunch","path":"sprites/Spr_Lunch/Spr_Lunch.yy",},},
