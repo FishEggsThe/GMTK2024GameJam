@@ -12,4 +12,5 @@ function FlyAway() {
 
 function LoseGame() {
 	global.lostGame = true
+	Obj_Shooter.sprite = Spr_ShooterSurprised
 }

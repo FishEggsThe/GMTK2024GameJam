@@ -1,4 +1,4 @@
-if !global.lostGame
+if !global.lostGame {
 	spawnRate--
 	if spawnRate < 0 {
 		if maxToSpawn > numToSpawn
