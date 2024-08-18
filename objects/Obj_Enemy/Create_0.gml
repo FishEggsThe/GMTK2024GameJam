@@ -10,3 +10,5 @@ points = 100
 
 rotate = random(360)
 rotateInc = 1/5
+
+enemyColor = #8A00DB

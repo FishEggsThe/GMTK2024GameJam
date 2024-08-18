@@ -1,5 +1,9 @@
-enemyPool = [Obj_Enemy]
-enemyPoolSize = array_length(enemyPool)
+enemyPools = [[Obj_Enemy],
+			  [Obj_Enemy, Obj_Enemy, Obj_EnemyBig],
+			  [Obj_Enemy, Obj_Enemy, Obj_EnemyBig, Obj_EnemySide],
+			  [Obj_Enemy, Obj_Enemy, Obj_EnemyBig, Obj_EnemySide, Obj_EnemySneaky]]
+enemyPoolsIndex = 0
+enemyPoolSize = array_length(enemyPools[enemyPoolsIndex])
 
 // Spawn rate
 spawnRateSet = 180

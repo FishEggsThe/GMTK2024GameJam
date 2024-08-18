@@ -1,5 +1,5 @@
 // color of the sprites are white so you can set it to the color of the enemy
-image_blend = #6F00B0;
+image_blend = #8A00DB;
 
 // gets a random speed value
 randomize();

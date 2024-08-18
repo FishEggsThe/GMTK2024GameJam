@@ -21,7 +21,7 @@ function LoseGame() {
 	AddScreenShake(4)
 }
 
-function HitParticle() {
+function HitParticle(_color = enemyColor) {
 	repeat(5){
 		instance_create_layer(x+floor(random_range(-16,16)),
 		y+floor(random_range(-16,16)),
@@ -32,7 +32,7 @@ function HitParticle() {
 function EnemyDie(_enemy = id) {
 	with _enemy {
 		var i=0;
-		repeat(5) {HitParticle()}
+		repeat(5) {HitParticle(_enemy.enemyColor)}
 		instance_destroy()
 	}
 }

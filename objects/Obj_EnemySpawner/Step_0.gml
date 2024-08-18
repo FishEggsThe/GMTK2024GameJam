@@ -40,8 +40,8 @@ if !global.lostGame {
 			setHp++
 			
 		// Enemy Pool
-		if setHp >= 6
-			enemyPool = [Obj_Enemy, Obj_Enemy, Obj_EnemySide]
+		if (difficulty%2 = 1 && enemyPoolsIndex < array_length(enemyPools))
+			enemyPoolsIndex++
 	
 		// Max spawns at a time
 		if spawnRateSet % 60 == 0
