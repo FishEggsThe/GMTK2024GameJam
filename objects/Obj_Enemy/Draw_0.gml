@@ -14,8 +14,10 @@ var yEyes = y + clamp((Obj_Shooter.y-y)/17, -range, range)
 draw_sprite(Spr_EnemyEyes, gotLunch, xEyes, yEyes)
 if gotLunch {xEyes = 0; yEyes = 90}
 
-var barWidth = 100/2; var barHeight = 20/2
-draw_rectangle_color(x-barWidth-3, y-barHeight-3, x+barWidth+3, y+barHeight+3, c_black, c_black, c_black, c_black, false)
-draw_rectangle_color(x-barWidth, y-barHeight, x+barWidth, y+barHeight, c_red, c_red, c_red, c_red, false)
+var barWidth = 20/2; var barHeight = 20/2
+draw_rectangle_color(x-barWidth-3, y+20+barHeight-3, x+barWidth+3, y+20+2*barHeight+3, c_black, c_black, c_black, c_black, false)
+draw_rectangle_color(x-barWidth, y+20+barHeight, x+barWidth, y+20+2*barHeight, c_red, c_red, c_red, c_red, false)
+draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
-draw_text_color(x, y, hp, c_black, c_black, c_black, c_black, 1)
+draw_text_color(x, y+20+barHeight*1.5, hp, c_black, c_black, c_black, c_black, 1)
+DrawGregText(hp, x, y+20+barHeight*1.5, 2, fa_center, fa_middle)
