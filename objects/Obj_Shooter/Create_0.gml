@@ -20,3 +20,4 @@ ballQueueSize = 3
 ballQueue = array_create(ballQueueSize, 0)
 for(var i = 0; i < ballQueueSize; i++)
 	ballQueue[i] = irandom(5)//global.numOfBallTypes-1)
+reserveBall = -1
