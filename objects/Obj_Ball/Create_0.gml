@@ -1,6 +1,8 @@
 type = 0
 tier = 1
 flying = true
+flash = 0
+setFlash = 3
 
 moveAngle = 90
 moveSpeed = 30

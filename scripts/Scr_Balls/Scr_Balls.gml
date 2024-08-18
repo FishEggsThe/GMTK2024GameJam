@@ -1,5 +1,7 @@
-function DrawBall(_type, _size = [1, 1], _tier = tier,  _xPos = x, _yPos = y) {
+function DrawBall(_type, _size = [1, 1], _tier = tier,  _xPos = x, _yPos = y, _flash = false) {
+	gpu_set_fog(_flash, c_white, 0, 1000)
 	draw_sprite_ext(global.ballSprites[_tier-1], _type, _xPos, _yPos, _size[0], _size[1], 0, c_white, 1)
+	gpu_set_fog(false, c_white, 0, 1000)
 }
 
 function ResetBounced() {
@@ -63,6 +65,7 @@ function MergeBalls(_ball, _targetBall) {
 		_targetBall.maxMoveSpeed -= 10//maxMoveSpeed/3
 		_targetBall.mask_index = global.ballSprites[tier-1]
 		_targetBall.squashPercent = 0
+		_targetBall.flash = setFlash
 	}
 	
 }

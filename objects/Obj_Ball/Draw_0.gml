@@ -11,5 +11,5 @@ if shudder > 0 {
 	shudder--
 }
 
-DrawBall(type, squash, tier, xPos, yPos)
+DrawBall(type, squash, tier, xPos, yPos, flash>0)
  

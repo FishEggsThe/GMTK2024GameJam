@@ -28,4 +28,7 @@ if numToSpawn <= 0 {
 	
 	if spawnRateSet % 60 == 0
 		maxToSpawn += 3
+	
+	numToSpawn = setNumToSpawn
+	difficulty++
 }
