@@ -16,7 +16,7 @@ if reserveBall > -1
 // Lives
 for(var i = 0; i < playerLives; i++) {
 	size = (i == 0 ? [2, 2] : [1, 1])
-	draw_sprite_ext(chives, 0, 60, height-120*(i+1)+60, size[0], size[1], 1, c_white, 1)
+	draw_sprite_ext(Spr_Lunch, 0, 60, height-120*(i+1)+60, size[0], size[1], 1, c_white, 1)
 }
 
 // Juice

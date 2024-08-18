@@ -33,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_SneakyEnemy",
+    "path":"sprites/Spr_SneakyEnemy/Spr_SneakyEnemy.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
