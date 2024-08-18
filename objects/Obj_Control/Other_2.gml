@@ -10,6 +10,8 @@ global.fontHeight = sprite_get_height(global.fontSprite)
 global.fontContains = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,():;!?/'\"<>"
 global.containsLength = string_length(global.fontContains)
 
+global.lostGame = false
+
 image_alpha = 0.25
 
 window_set_cursor(cr_none)
