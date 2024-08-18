@@ -16,7 +16,7 @@ function LoseGame() {
 	with Obj_Shooter {
 		bodySprite = Spr_ShooterSurprised
 		armSprite = Spr_PlayerArmShock
-		instance_create_layer(x+16,y-48,"Instances",obj_shock);
+		instance_create_layer(x+16,y-48,"Particles",obj_shock);
 	}
 	AddScreenShake(4)
 }
@@ -25,7 +25,7 @@ function HitParticle() {
 	repeat(5){
 		instance_create_layer(x+floor(random_range(-16,16)),
 		y+floor(random_range(-16,16)),
-		"Instances",obj_HitPart);
+		"Particles",obj_HitPart);
 	}
 }
 

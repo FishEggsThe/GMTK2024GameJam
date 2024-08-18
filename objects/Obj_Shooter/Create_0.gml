@@ -1,7 +1,7 @@
 bodySprite = Spr_Shooter
 armSprite = Spr_PlayerArm
 x = room_width/2
-y = room_height-45
+y = room_height-60
 
 shootAngle = 90
 shotPower = 0

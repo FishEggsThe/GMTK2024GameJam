@@ -36,7 +36,7 @@ function DrawExplosion() {
 }
 
 function CauseExplosion(_type, _tier){
-	with instance_create_layer(x, y, "Instances", Obj_Explosion) {
+	with instance_create_layer(x, y, "Particles", Obj_Explosion) {
 		blastType = _type
 		blastDirections = DetermineExplosion(blastType)
 		blastDirectionsSize = array_length(blastDirections)
