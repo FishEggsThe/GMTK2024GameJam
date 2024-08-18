@@ -3,7 +3,6 @@ function TakeLife(){
 	if Obj_Shooter.playerLives <= 0
 		LoseGame()
 	StartFlyAway()
-	instance_destroy()
 }
 
 function StartFlyAway() {

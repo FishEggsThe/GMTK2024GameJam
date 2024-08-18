@@ -8,5 +8,5 @@ deleteOffScreen = false
 
 points = 100
 
-rotate = 0
+rotate = random(360)
 rotateInc = 1/5

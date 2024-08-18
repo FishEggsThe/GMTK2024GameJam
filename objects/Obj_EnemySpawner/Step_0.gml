@@ -8,7 +8,7 @@ if !global.lostGame {
 		var spawnBurst = irandom(maxToSpawn)
 		if spawnBurst <= 0 {spawnBurst = 1}
 		numToSpawn-= spawnBurst
-		var enemyToSpawn = enemyPool[irandom(enemyPoolSize)]
+		var enemyToSpawn = enemyPool[irandom(enemyPoolSize-1)]
 	
 		var offset = 38
 		repeat (spawnBurst) {
