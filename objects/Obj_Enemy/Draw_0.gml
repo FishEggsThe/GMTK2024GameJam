@@ -11,7 +11,8 @@ var range = 14
 var xEyes = x + clamp((Obj_Shooter.x-x)/17, -range, range)
 var yEyes = y + clamp((Obj_Shooter.y-y)/17, -range, range)
 //draw_sprite_ext(Spr_EnemyEyes, 0, xPos, yPos, 1, 1, 5*sin(degtorad(rotate*4)), c_white, 1)
-draw_sprite(Spr_EnemyEyes, 0, xEyes, yEyes)
+draw_sprite(Spr_EnemyEyes, gotLunch, xEyes, yEyes)
+if gotLunch {xEyes = 0; yEyes = 90}
 
 var barWidth = 100/2; var barHeight = 20/2
 draw_rectangle_color(x-barWidth-3, y-barHeight-3, x+barWidth+3, y+barHeight+3, c_black, c_black, c_black, c_black, false)

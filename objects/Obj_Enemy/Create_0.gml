@@ -4,7 +4,7 @@ bodyIndex = irandom(2)
 hp = 3
 moveSpeed = 1
 moveSpeedInc = 0
-deleteOffScreen = false
+gotLunch = false
 
 points = 100
 

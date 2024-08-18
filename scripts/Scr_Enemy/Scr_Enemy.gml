@@ -8,7 +8,7 @@ function TakeLife(){
 function StartFlyAway() {
 	moveSpeed *= -1
 	moveSpeedInc = -0.3
-	deleteOffScreen = true
+	gotLunch = true
 }
 
 function LoseGame() {

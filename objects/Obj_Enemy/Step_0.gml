@@ -2,10 +2,10 @@ if !global.lostGame {
 	moveSpeed += moveSpeedInc
 	y += moveSpeed
 
-	if (y > room_height+sprite_get_height(bodySprite) && !deleteOffScreen) {TakeLife()}
+	if (y > room_height+sprite_get_height(bodySprite) && !gotLunch) {TakeLife()}
 }
 
-if (deleteOffScreen && y <= -38)
+if (gotLunch && y <= -38)
 	instance_destroy()
 
 //var i=0
