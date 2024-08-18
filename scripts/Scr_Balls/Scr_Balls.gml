@@ -12,7 +12,7 @@ function DrawBall(_type, _size = [1, 1], _tier = tier,  _xPos = x, _yPos = y, _f
 		DrawGregText(_type, _xPos, _yPos)
 }
 
-function SetBallSquish(_amount = 1,_ball = id) {
+function SetBallSquash(_amount = 1,_ball = id) {
 	_ball.squashPercent = 0
 	_ball.squashAmount = _amount
 }
@@ -32,12 +32,12 @@ function MoveBall() {
 	if place_meeting(x+xSpeed, y, Obj_Border) {
 		xSpeed *= -1
 		xBounced *= -1
-		SetBallSquish(0.5)
+		SetBallSquash(0.5)
 	}
 	if (y+ySpeed < 0 || y+ySpeed > room_height) {
 		ySpeed *= -1
 		yBounced *= -1
-		SetBallSquish(0.5)
+		SetBallSquash(0.5)
 	}
 	
 	var ballTouched = instance_place(x+xSpeed, y+ySpeed, Obj_Ball)
@@ -56,8 +56,8 @@ function MoveBall() {
 			//moveSpeed *= 1-weightRatio
 			moveAngle = ToucherAngle
 			ballTouched.moveAngle = ToucheeAngle
-			ResetBounced(); SetBallSquish(0.5)
-			with ballTouched {ResetBounced(); SetBallSquish(0.5)}
+			ResetBounced(); SetBallSquash(moveSpeed/maxMoveSpeed)
+			with ballTouched {ResetBounced(); SetBallSquash(moveSpeed/maxMoveSpeed)}
 		}
 	}
 	
@@ -79,7 +79,7 @@ function MergeBalls(_ball, _targetBall) {
 		_targetBall.maxMoveSpeed -= 10//maxMoveSpeed/3
 		_targetBall.mask_index = global.ballSprites[tier-1]
 		_targetBall.flash = setFlash
-		SetBallSquish(1, _targetBall)
+		SetBallSquash(1, _targetBall)
 	}
 	
 }
