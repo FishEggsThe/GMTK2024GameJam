@@ -1,3 +1,4 @@
+mask_index = global.ballSprites[tier-1]
 if moveSpeed > 0 {
 	MoveBall()
 } else {
