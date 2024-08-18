@@ -11,7 +11,7 @@ setMaxToSpawn = 2
 maxToSpawn = setMaxToSpawn
 
 // Enemy speed
-setSetSpeed = 100//0.75
+setSetSpeed = 0.75
 setSpeed = setSetSpeed
 
 // Enemy health
