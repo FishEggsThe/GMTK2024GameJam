@@ -1,6 +1,6 @@
 {
   "$GMAnimCurve":"",
-  "%Name":"BallSquashNStretch",
+  "%Name":"AnCv_BallSquashNStretch",
   "channels":[
     {"$GMAnimCurveChannel":"","%Name":"curve1","colour":4290799884,"name":"curve1","points":[
         {"th0":-0.25,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
@@ -20,7 +20,7 @@
       ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
   ],
   "function":2,
-  "name":"BallSquashNStretch",
+  "name":"AnCv_BallSquashNStretch",
   "parent":{
     "name":"Animation Curves",
     "path":"folders/Animation Curves.yy",

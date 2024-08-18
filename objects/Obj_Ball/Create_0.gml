@@ -15,7 +15,7 @@ shudder = 0
 squash = [1, 1]
 squashPercent = 1
 squashPercentInc = 1/15
-squashCurve = BallSquashNStretch
+squashCurve = AnCv_BallSquashNStretch
 curve = [animcurve_get_channel(squashCurve, "curve1"), 
 		  animcurve_get_channel(squashCurve, "curve2")]
 

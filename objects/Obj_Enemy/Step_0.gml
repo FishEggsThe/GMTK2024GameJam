@@ -1,6 +1,8 @@
-y += moveSpeed
+if !global.lostGame {
+	y += moveSpeed
 
-if y > room_height+sprite_get_height(bodySprite) {TakeLife()}
+	if y > room_height+sprite_get_height(bodySprite) {TakeLife()}
+}
 
 //var i=0
 //for(i=0; i<1; i=i+0.1) {

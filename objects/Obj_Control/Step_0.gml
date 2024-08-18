@@ -1,3 +1,4 @@
+// Debug here don't look
 if keyboard_check_pressed(vk_enter) {
 	global.debug = !global.debug
 	//if instance_exists(Obj_EnemySpawner)
