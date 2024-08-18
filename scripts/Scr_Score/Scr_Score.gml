@@ -4,6 +4,7 @@ function AddScore(_points, spotCheck = 0, tier = 0){
 	if multAdd > 0 {multiplier += multAdd}
 	
 	Obj_ScoreSystem.totalScore += _points*multiplier
+	Obj_ScoreSystem.pointsUntilLife -= _points*multiplier
 }
 
 function DrawGregText(_string, _x, _y, _size = 3, _halign = fa_left, _valign = fa_top) {
