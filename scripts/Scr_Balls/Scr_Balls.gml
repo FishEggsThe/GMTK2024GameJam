@@ -1,9 +1,10 @@
 function DrawBall(_type, _size = [1, 1], _tier = tier,  _xPos = x, _yPos = y, _flash = false) {
+	var trueTier = clamp(_tier, 1, 3)
 	gpu_set_fog(_flash, c_white, 0, 1000)
 	
 	// Regular Ball
 	if _type < 6
-		draw_sprite_ext(global.ballSprites[_tier-1], _type, _xPos, _yPos, _size[0], _size[1], 0, c_white, 1)
+		draw_sprite_ext(global.ballSprites[trueTier-1], _type, _xPos, _yPos, _size[0], _size[1], 0, c_white, 1)
 	// Super Ball
 	else {
 		var drawSuperBall = Spr_SuperBall
@@ -80,7 +81,7 @@ function MergeBalls(_ball, _targetBall) {
 	instance_destroy(_ball)
 	
 	if _targetBall.tier > global.numOfBallTiers {
-		_targetBall.tier = 3
+		//_targetBall.tier = 3
 		ExplodeBall(_targetBall)
 	} else {
 		_targetBall.maxMoveSpeed -= 10//maxMoveSpeed/3

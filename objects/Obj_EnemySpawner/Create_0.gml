@@ -1,8 +1,9 @@
 enemyPools = [[Obj_Enemy],
-			  [Obj_Enemy, Obj_Enemy, Obj_EnemyBig],
-			  [Obj_Enemy, Obj_Enemy, Obj_EnemyBig, Obj_EnemySide],
-			  [Obj_Enemy, Obj_Enemy, Obj_EnemyBig, Obj_EnemySide, Obj_EnemySneaky]]
+			  [Obj_Enemy, Obj_Enemy, Obj_EnemySide],
+			  [Obj_Enemy, Obj_Enemy, Obj_EnemySide, Obj_EnemySneaky],
+			  [Obj_Enemy, Obj_Enemy, Obj_EnemySide, Obj_EnemySneaky, Obj_EnemySneaky]]
 enemyPoolsIndex = 0
+enemyPoolsSize = array_length(enemyPools)
 enemyPoolSize = array_length(enemyPools[enemyPoolsIndex])
 
 // Spawn rate
@@ -10,7 +11,7 @@ spawnRateSet = 180
 spawnRate = spawnRateSet
 
 // Wave size
-setNumToSpawn = 18
+setNumToSpawn = 12
 numToSpawn = setNumToSpawn
 
 // Max spawns at a time

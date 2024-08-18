@@ -40,9 +40,10 @@ function CauseExplosion(_type, _tier){
 		blastType = _type
 		blastDirections = DetermineExplosion(blastType)
 		blastDirectionsSize = array_length(blastDirections)
-		blastSize = sprite_get_width(global.ballSprites[_tier-1])-6
+		var trueTier = clamp(_tier, 1, 3)
+		blastSize = sprite_get_width(global.ballSprites[trueTier-1])-6
 		laserWidth = blastSize / sprite_get_height(laserSprite)
-		damage = _tier
+		damage = _tier + _tier-1
 		AddScreenShake(damage*10)
 	}
 }
@@ -123,7 +124,7 @@ function ExplosionCollision(_angle, _width = blastSize) {
 					AddScore(enemy.points, ds_list_find_index(blacklist, enemy))
 					AddJuice(damage)
 					EnemyDie(enemy)
-				} else { with enemy {HitParticle()} }
+				} else { with enemy {shudder = 15; HitParticle()} }
 			}
 	    }
 	}

@@ -8,7 +8,7 @@ if !global.lostGame {
 		var spawnBurst = irandom(maxToSpawn)
 		if spawnBurst <= 0 {spawnBurst = 1}
 		numToSpawn-= spawnBurst
-		var enemyToSpawn = enemyPool[irandom(enemyPoolSize-1)]
+		var enemyToSpawn = enemyPools[enemyPoolsIndex][irandom(enemyPoolSize-1)]
 	
 		var offset = 38
 		repeat (spawnBurst) {
@@ -29,19 +29,21 @@ if !global.lostGame {
 		
 		// Wave size
 		if setNumToSpawn < 72
-			setNumToSpawn += 6
+			setNumToSpawn += 3
 		
 		// Enemy speed
-		if setSetSpeed < 1.5
+		if (difficulty%3 = 0 && setSetSpeed < 1.5)
 			setSetSpeed += 0.25
 		
 		// Enemy health
-		if (setHp < 9 && difficulty%2 == 1)
+		if (setHp < 9 && difficulty%3 == 1)
 			setHp++
 			
 		// Enemy Pool
-		if (difficulty%2 = 1 && enemyPoolsIndex < array_length(enemyPools))
+		if (difficulty%3 == 1 && enemyPoolsIndex < enemyPoolsSize) {
 			enemyPoolsIndex++
+			enemyPoolSize = array_length(enemyPools[enemyPoolsIndex])
+		}
 	
 		// Max spawns at a time
 		if spawnRateSet % 60 == 0
