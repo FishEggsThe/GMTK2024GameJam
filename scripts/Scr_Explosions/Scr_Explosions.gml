@@ -1,4 +1,5 @@
 function DrawExplosion() {
+	var superColor = 0
 	for(var i = 0; i < 5; i++) {
 		for(var j = 0; j < blastDirectionsSize; j++) {
 			var rotation = 15
@@ -49,24 +50,31 @@ function DetermineExplosion(_type){
 	switch(_type) {
 		case 0:
 			blastDir = ["vert", "hori"]
+			laserColor = c_green
 			break
 		case 1:
 			blastDir = ["hori"]
+			laserColor = c_blue
 			break
 		case 2:
 			blastDir = ["vert"]
+			laserColor = c_red
 			break
 		case 3:
 			blastDir = ["slash", "bslash"]
+			laserColor = c_yellow
 			break
 		case 4:
 			blastDir = ["bslash"]
+			laserColor = c_maroon
 			break
 		case 5:
 			blastDir = ["slash"]
+			laserColor = c_fuchsia
 			break
 		case 6:
 			blastDir = ["vert", "hori", "slash", "bslash"]
+			laserColor = c_white
 			break
 	}
 	return blastDir
