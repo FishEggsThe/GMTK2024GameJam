@@ -37,3 +37,13 @@ function AddJuice(_juice) {
 	Obj_Shooter.juice+=_juice*1.5
 	if Obj_Shooter.juice > Obj_Shooter.maxJuice {Obj_Shooter.juice = Obj_Shooter.maxJuice}
 }
+
+// Ian script
+function scr_shocking(){
+    if(instance_exists(obj_shock) == true){
+        sprite_index = Sprite15;
+        image_index = 0;
+    } else {
+        exit;
+    }
+}

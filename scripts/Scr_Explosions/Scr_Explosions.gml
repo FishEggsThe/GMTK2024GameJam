@@ -71,7 +71,7 @@ function ExplosionCollision(_angle, _width = blastSize) {
 		        if enemy.hp <= 0 {
 					AddScore(enemy.points, ds_list_find_index(blacklist, enemy))
 					AddJuice(damage)
-					instance_destroy(enemy)
+					EnemyDie(enemy)
 				}
 			}
 	    }

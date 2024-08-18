@@ -2,13 +2,8 @@
 var armExtend = clamp(sqrt(power((mouse_x-x),2)+power((mouse_y-y),2))/150,0.5,1.5)
 if !global.lostGame
 	draw_sprite_ext(Spr_PlayerArm, 0, x, y, armExtend, 1, shootAngle, c_white, 1)
-else {
-	
+
 // The Main Character
-	draw_sprite(Spr_Surprise, surprise, x+30, y-50)
-	if surprise < 6
-		surprise+=surpriseInc
-}
 draw_sprite(sprite, image_index, x, y)
 
 if shotPower > 0 {

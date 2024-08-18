@@ -17,8 +17,6 @@ maxJuice = 100
 givenJuicedBall = false
 
 playerLives = 3
-surprise = 0
-surpriseInc = 12/60
 
 ballQueueSize = 3
 ballQueue = array_create(ballQueueSize, 0)
