@@ -30,6 +30,9 @@ function DetermineExplosion(_type){
 		case 5:
 			blastDir = ["slash"]
 			break
+		case 6:
+			blastDir = ["vert", "hori", "slash", "bslash"]
+			break
 	}
 	return blastDir
 }

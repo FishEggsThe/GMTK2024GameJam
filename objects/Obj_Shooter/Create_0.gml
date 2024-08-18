@@ -12,8 +12,9 @@ canPower = false
 shotDelay = 5
 reversePower = false
 
-juice = 0
+juice = 99//0
 maxJuice = 100
+givenJuicedBall = false
 
 playerLives = 3
 surprise = 0

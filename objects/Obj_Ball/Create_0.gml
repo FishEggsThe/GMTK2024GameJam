@@ -20,4 +20,4 @@ curve = [animcurve_get_channel(squashCurve, "curve1"),
 		  animcurve_get_channel(squashCurve, "curve2")]
 
 image_speed = 0
-mask_index = global.ballSprites[0]
+//mask_index = global.ballSprites[0]

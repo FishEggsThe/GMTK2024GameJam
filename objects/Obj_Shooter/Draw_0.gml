@@ -26,6 +26,7 @@ if shotPower > 0 {
 	var xDotPos = xVector*dotLineDist
 	var yDotPos = yVector*dotLineDist
 	
+	draw_set_color(c_white)
 	for(var i = 0; i <= dots; i++) {
 		var xBall = x+xArmDist+xDotPos*i
 		var yBall = y+yArmDist+yDotPos*i
