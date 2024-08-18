@@ -1,4 +1,5 @@
 if !global.lostGame {
+	// Regular spawning
 	spawnRate--
 	if spawnRate < 0 {
 		if maxToSpawn > numToSpawn
@@ -17,20 +18,30 @@ if !global.lostGame {
 		spawnRate = spawnRateSet
 	}
 
+	// Difficulty increase
 	if numToSpawn <= 0 {
+		difficulty++
+		// Spawn rate
 		if spawnRateSet > 20
 			spawnRateSet -= 20
 		
+		// Wave size
 		if setNumToSpawn < 72
 			setNumToSpawn += 6
 		
+		// Enemy speed
 		if setSetSpeed < 1.5
 			setSetSpeed += 0.25
+		
+		// Enemy health
+		if (setHp < 9 && difficulty%2 == 1)
+			setHp++
 	
+		// Max spawns at a time
 		if spawnRateSet % 60 == 0
-			maxToSpawn += 3
+			setMaxToSpawn++
 	
 		numToSpawn = setNumToSpawn
-		difficulty++
+		maxToSpawn = setMaxToSpawn
 	}
 }
