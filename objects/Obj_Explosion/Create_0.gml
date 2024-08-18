@@ -6,7 +6,8 @@ alarmSet = 45
 alarm[0] = alarmSet
 
 blastType = 0
-laserSprite = Spr_Laser
+laserSprite = Spr_SuperLaser
+laserColor = c_white
 
 enemiesHit = ds_list_create()
 blacklist = ds_list_create()

@@ -1,1 +1,1 @@
-sprite = hi
+bodySprite = hi

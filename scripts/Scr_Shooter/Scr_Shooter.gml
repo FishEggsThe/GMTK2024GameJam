@@ -2,28 +2,24 @@ function ShootBall(_speed, _type, _angle) {
 	var ball = noone
 	if _type == global.numOfBallTypes {
 		ball = instance_create_layer(x, y, "Instances", Obj_SuperBall)
-		with ball {
-			moveAngle = _angle
-			moveSpeed = _speed
-		}
 		juice = 0
 		givenJuicedBall = false
 	}
 	else {
 		ball = instance_create_layer(x, y, "Instances", Obj_Ball)
-		with ball {
-			type = _type
-			moveAngle = _angle
-			trueSpeed = power(_speed, 1.1)
-			//var xPos = x + cos(degtorad(moveAngle))*_speed
-			//var yPos = y + sin(degtorad(moveAngle))*_speed
-			//var dist = point_distance(x, y, xPos, yPos)
-			//moveSpeed = sqrt(2*moveFriction*dist)
-			moveSpeed = _speed
-		}
+	}
+	with ball {
+		type = _type
+		moveAngle = _angle
+		trueSpeed = power(_speed, 1.1)
+		//var xPos = x + cos(degtorad(moveAngle))*_speed
+		//var yPos = y + sin(degtorad(moveAngle))*_speed
+		//var dist = point_distance(x, y, xPos, yPos)
+		//moveSpeed = sqrt(2*moveFriction*dist)
+		moveSpeed = _speed
+		SetBallSquash(1)
 	}
 	CycleQueue()
-	SetBallSquash(1, ball)
 }
 
 function CycleQueue() {

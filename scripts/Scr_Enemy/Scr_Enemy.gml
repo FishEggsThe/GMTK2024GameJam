@@ -17,6 +17,7 @@ function LoseGame() {
 		armSprite = Spr_PlayerArmShock
 		instance_create_layer(x+16,y-48,"Instances",obj_shock);
 	}
+	AddScreenShake(4)
 }
 
 function HitParticle() {

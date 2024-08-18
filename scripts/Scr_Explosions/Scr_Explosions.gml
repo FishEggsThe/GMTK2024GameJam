@@ -1,9 +1,44 @@
+function DrawExplosion() {
+	for(var i = 0; i < 5; i++) {
+		for(var j = 0; j < blastDirectionsSize; j++) {
+			var rotation = 15
+			switch(blastDirections[j]) {
+				case "vert":
+				if alarm == 44 show_debug_message("Vertical")
+				rotation = 90
+				break
+		
+				case "hori":
+				if alarm == 44 show_debug_message("Horizontal")
+				rotation = 0
+				break
+		
+				case "slash":
+				if alarm == 44 show_debug_message("Slash")
+				rotation = 45
+				break
+		
+				case "bslash":
+				if alarm == 44 show_debug_message("BackSlash")
+				rotation = 135
+				break
+			}
+		
+			for (var face = -1; face <= 1; face+=2) {
+				draw_sprite_ext(laserSprite, i, x, y, room_width*face, laserWidth, rotation, laserColor, 1)
+			}
+		
+		}
+	}
+}
+
 function CauseExplosion(_type, _tier){
 	with instance_create_layer(x, y, "Instances", Obj_Explosion) {
 		blastType = _type
 		blastDirections = DetermineExplosion(blastType)
 		blastDirectionsSize = array_length(blastDirections)
 		blastSize = sprite_get_width(global.ballSprites[_tier-1])-6
+		laserWidth = blastSize / sprite_get_height(laserSprite)
 		damage = _tier
 		AddScreenShake(damage*10)
 	}
