@@ -15,5 +15,8 @@ image_speed = 0;
 image_index = random_range(0,5);
 
 // sets up the squash and strech
-image_xscale = 0.5;
-image_yscale = 2;
+squash = 0.5;
+stretch = 2;
+
+// what the variable says
+scaleRandomness = random_range(0.8,1.2);

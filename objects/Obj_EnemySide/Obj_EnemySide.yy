@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_HitPart",
+  "%Name":"Obj_EnemySide",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_HitPart",
+  "name":"Obj_EnemySide",
   "overriddenProperties":[],
   "parent":{
-    "name":"Particles",
-    "path":"folders/Objects/Particles.yy",
+    "name":"Enemy",
+    "path":"folders/Objects/Enemy.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"Obj_Enemy",
+    "path":"objects/Obj_Enemy/Obj_Enemy.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_HitPart",
-    "path":"sprites/spr_HitPart/spr_HitPart.yy",
+    "name":"Spr_SideEnemy",
+    "path":"sprites/Spr_SideEnemy/Spr_SideEnemy.yy",
   },
   "spriteMaskId":null,
   "visible":true,

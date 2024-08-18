@@ -1,3 +1,6 @@
+enemyPool = [Obj_Enemy]
+enemyPoolSize = array_length(enemyPool)
+
 // Spawn rate
 spawnRateSet = 180
 spawnRate = spawnRateSet

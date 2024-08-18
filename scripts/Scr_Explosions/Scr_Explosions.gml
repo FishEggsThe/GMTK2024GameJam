@@ -27,7 +27,8 @@ function DrawExplosion() {
 		
 			for (var face = -1; face <= 1; face+=2) {
 				var pickColor = (i < 5-1 ? laserColor[irandom(totalColors)] : c_white)
-				draw_sprite_ext(laserSprite, i, x, y, room_width*face, laserWidth, rotation, pickColor, 1)
+				var laserLife = laserWidth*alarm[0]/alarmSet
+				draw_sprite_ext(laserSprite, i, x, y, room_width*face, laserLife, rotation, pickColor, 1)
 			}
 		
 		}
