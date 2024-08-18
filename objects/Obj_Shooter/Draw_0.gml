@@ -6,12 +6,6 @@ draw_sprite_ext(Spr_PlayerArm, 0, x, y, armExtend, 1, shootAngle, c_white, 1)
 draw_sprite(Spr_Shooter, image_index, x, y)
 
 if shotPower > 0 {
-	//var length = 50
-	//var xPower = x+(2*shotPower*length/shotPowerMax)*cos(degtorad(shootAngle))
-	//var yPower = y-(2*shotPower*length/shotPowerMax)*sin(degtorad(shootAngle))
-	//draw_set_color(c_green)
-	//draw_arrow(x, y, xPower, yPower, 30)
-	
 	// Dotted Line
 	var xVector = cos(degtorad(shootAngle))
 	var yVector = -sin(degtorad(shootAngle))
@@ -28,8 +22,8 @@ if shotPower > 0 {
 	for(var i = 0; i <= dots; i++) {
 		var xBall = x+xPos+xDotPos*i
 		var yBall = y+yPos+yDotPos*i
-		//if (point_distance(xBall, yBall, x, y) > 85*armExtend &&
-		//	point_distance(xBall, yBall, mouse_x, mouse_y) > 32)
+		if (point_distance(xBall, yBall, x, y) > armDist &&
+			point_distance(xBall, yBall, mouse_x, mouse_y) > 32)
 			draw_circle(xBall, yBall, 2, false)
 	}
 }

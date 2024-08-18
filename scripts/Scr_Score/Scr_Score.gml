@@ -6,7 +6,7 @@ function AddScore(_points, spotCheck = 0, tier = 0){
 	Obj_ScoreSystem.totalScore += _points*multiplier
 }
 
-function DrawGregText(_string, _x, _y, _size = 1, _halign = fa_left, _valign = fa_top) {
+function DrawGregText(_string, _x, _y, _size = 3, _halign = fa_left, _valign = fa_top) {
 	var trueString = ""
 	trueString = string(_string)
 	trueString = string_upper(trueString)

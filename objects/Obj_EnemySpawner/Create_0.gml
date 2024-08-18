@@ -1,7 +1,11 @@
 spawnRateSet = 180
 spawnRate = spawnRateSet
-numToSpawn = 18
+
+setNumToSpawn = 18
+numToSpawn = setNumToSpawn
 maxToSpawn = 2
 
-setSetSpeed = 1//0.25
+setSetSpeed = 0.5
 setSpeed = setSetSpeed
+
+difficulty = 1
