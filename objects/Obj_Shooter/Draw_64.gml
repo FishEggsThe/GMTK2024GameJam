@@ -20,9 +20,10 @@ for(var i = 0; i < playerLives; i++) {
 }
 
 // Juice
-var xJuice = 115; var xMaxJuice = 255
-var juiceAmount = (xMaxJuice-xJuice)*(juice/maxJuice)
-draw_set_color(c_dkgray)
-draw_rectangle(xJuice-5, height-60, xMaxJuice+5, height-10, false)
-draw_set_color(c_teal)
-draw_rectangle(xJuice, height-55, xJuice+juiceAmount, height-15, false)
+juiceFrame += juiceFrameInc
+if juiceFrame >= 18 {juiceFrame-=18}
+var juiceAmount = juice/maxJuice
+var juiceHeight = sprite_get_height(Spr_Juice) 
+var yJuicePos = room_height-30 + juiceHeight-juiceHeight*juiceAmount
+draw_sprite(Spr_Juice, juiceFrame, 200, yJuicePos)
+draw_sprite(Spr_JuiceMeter, 0, 200, room_height-30)
