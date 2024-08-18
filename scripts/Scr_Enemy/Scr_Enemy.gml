@@ -29,7 +29,7 @@ function HitParticle() {
 function EnemyDie(_enemy = id) {
 	with _enemy {
 		var i=0;
-		HitParticle()
+		repeat(5) {HitParticle()}
 		instance_destroy()
 	}
 }
