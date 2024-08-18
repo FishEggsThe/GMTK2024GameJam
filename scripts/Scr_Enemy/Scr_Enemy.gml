@@ -13,7 +13,8 @@ function FlyAway() {
 function LoseGame() {
 	global.lostGame = true
 	with Obj_Shooter {
-		sprite = Spr_ShooterSurprised
+		bodySprite = Spr_ShooterSurprised
+		armSprite = Spr_PlayerArmShock
 		instance_create_layer(x+16,y-48,"Instances",obj_shock);
 	}
 }

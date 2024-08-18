@@ -1,13 +1,12 @@
 // Arm
 var armExtend = clamp(sqrt(power((mouse_x-x),2)+power((mouse_y-y),2))/150,0.5,1.5)
-if !global.lostGame
-	draw_sprite_ext(Spr_PlayerArm, 0, x, y, armExtend, 1, shootAngle, c_white, 1)
+draw_sprite_ext(armSprite, 0, x, y, armExtend, 1, shootAngle, c_white, 1)
 
 // The Main Character
-draw_sprite(sprite, image_index, x, y)
+draw_sprite(bodySprite, image_index, x, y)
 
+// Dotted Line
 if shotPower > 0 {
-	// Dotted Line
 	var xVector = cos(degtorad(shootAngle))
 	var yVector = -sin(degtorad(shootAngle))
 	var powerPercent = shotPower/shotPowerMax

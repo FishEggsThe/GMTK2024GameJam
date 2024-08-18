@@ -1,4 +1,5 @@
-sprite = Spr_Shooter
+bodySprite = Spr_Shooter
+armSprite = Spr_PlayerArm
 x = room_width/2
 y = room_height-45
 
