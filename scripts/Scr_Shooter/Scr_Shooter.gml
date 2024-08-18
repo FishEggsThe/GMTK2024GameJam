@@ -4,6 +4,8 @@ function ShootBall(_speed, _type, _angle) {
 			moveAngle = _angle
 			moveSpeed = _speed
 		}
+		juice = 0
+		givenJuicedBall = false
 	}
 	else {
 		with instance_create_layer(x, y, "Instances", Obj_Ball) {
@@ -24,6 +26,7 @@ function CycleQueue() {
 	for(var i = 0; i < ballQueueSize-1; i++)
 		ballQueue[i] = ballQueue[i+1]
 	ballQueue[ballQueueSize-1] = irandom(global.numOfBallTypes-1)
+	
 	if juice >= maxJuice && !givenJuicedBall {
 		givenJuicedBall = true
 		ballQueue[ballQueueSize-1] = global.numOfBallTypes
