@@ -65,3 +65,34 @@ function DrawGregText(_string, _x, _y, _size = 3, _halign = fa_left, _valign = f
 	}
 	
 }
+
+function HighScoreJudgement(_name, _score = Obj_ScoreSystem.totalScore) {
+	with Obj_ScoreSystem {
+		var placementIndex = -1
+		for(var i = 0; i < 3; i++) {
+			if _score > highScores[i][1] {
+				placementIndex = i; break
+			}
+		}
+	
+		if placementIndex > -1 {
+			newHighScore = true
+			
+			for(var i = placementIndex; i < 2; i++) {
+				highScores[i][0] = highScores[i+1][0]
+				highScores[i][1] = highScores[i+1][1]
+			}
+			highScores[placementIndex][0] = _name
+			highScores[placementIndex][1] = _score
+		
+			file = file_text_open_write("dontopenplease.txt")
+			var highScoresString = ""
+			for(var i = 0; i < 3; i++) {
+				highScoresString += highScores[i][0] + "$" + string(highScores[i][1])
+				if i < 2 {highScoresString += "\n"}
+			}
+			file_text_write_string(file, highScoresString)
+			file_text_close(file)
+		}
+	}
+}

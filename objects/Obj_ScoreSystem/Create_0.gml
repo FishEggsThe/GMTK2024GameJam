@@ -1,7 +1,8 @@
 totalScore = 0
 setPointsUntilLife = 10000
 pointsUntilLife = setPointsUntilLife
-highScores = [["", 0], ["", 0], ["", 0]]
+highScores = [[], [], []]
+newHighScore = false
 	
 file = noone
 var filename = "dontopenplease.txt"
@@ -12,7 +13,7 @@ if !file_exists("dontopenplease.txt") {
 	file = file_text_open_write("dontopenplease.txt")
 	var highScoresString = "FSH$50000\n"
 		highScoresString +="IAN$40000\n"
-		highScoresString +="!?#$30000"
+		highScoresString +="!?#$1"
 	file_text_write_string(file, highScoresString)
 	file_text_close(file)
 }
@@ -20,6 +21,7 @@ if !file_exists("dontopenplease.txt") {
 //show_debug_message(game_save_id)
 file = file_text_open_read("dontopenplease.txt")
 for(var i = 0; i < 3; i++) {
+	highScores[i] = array_create(2, noone)
 	var highScore = string_split(file_text_read_string(file), "$")
 	highScores[i][0] = highScore[0]
 	highScores[i][1] = int64(highScore[1])

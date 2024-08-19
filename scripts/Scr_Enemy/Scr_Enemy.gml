@@ -18,6 +18,7 @@ function LoseGame() {
 		armSprite = Spr_PlayerArmShock
 		instance_create_layer(x+16,y-48,"Particles",obj_shock);
 	}
+	HighScoreJudgement("MTX", Obj_ScoreSystem.totalScore)
 	AddScreenShake(4)
 }
 
