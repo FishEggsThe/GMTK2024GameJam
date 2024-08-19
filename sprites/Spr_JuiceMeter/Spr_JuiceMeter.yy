@@ -23,7 +23,7 @@
   ],
   "name":"Spr_JuiceMeter",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"UI",
     "path":"folders/Sprites/UI.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":41,
-    "yorigin":298,
+    "yorigin":293,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
