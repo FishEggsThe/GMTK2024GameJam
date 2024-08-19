@@ -15,6 +15,8 @@ if global.gameStart {
 	DrawGregText("Buster Balls", room_width/2, room_height/4, 5, fa_center, fa_middle)
 	//var text = "Click left mouse to Play\nPress 'F' to change cursor size"
 	//DrawGregText(text, room_width/2, room_height/2, 2, fa_center, fa_middle)
-	DrawGregText("Click left mouse to Play", room_width/2, room_height/2, 2, fa_center, fa_middle)
-	DrawGregText("Press 'F' to change cursor size", room_width/2, room_height/2+(global.fontHeight+3)*2, 2, fa_center, fa_middle)
+	var yOffset = 80//(global.fontHeight+3)
+	DrawGregText("Click left mouse to Play", room_width/2, room_height/2-yOffset, 2, fa_center, fa_middle)
+	DrawGregText("Press 'Space' to see tutorial", room_width/2, room_height/2+(global.fontHeight+3)*2-yOffset, 2, fa_center, fa_middle)
+	DrawGregText("Press 'F' to change cursor size", room_width/2, room_height/2+(global.fontHeight+3)*4-yOffset, 2, fa_center, fa_middle)
 }

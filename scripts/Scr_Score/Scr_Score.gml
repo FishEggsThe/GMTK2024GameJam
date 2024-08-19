@@ -79,7 +79,7 @@ function HighScoreJudgement(_score = Obj_ScoreSystem.totalScore) {
 			newHighScore = true
 			setHighScoreName = true
 			for(var i = 0; i < 3; i++) {
-				with instance_create_layer(room_width*(1.5+i*0.5)/4, room_height/2, "Borders", Obj_NameButton) {
+				with instance_create_layer(room_width*(1.65+i*0.35)/4, room_height/2, "Borders", Obj_NameButton) {
 					var size = 5
 					image_xscale = size
 					image_yscale = size

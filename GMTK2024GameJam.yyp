@@ -69,7 +69,10 @@
     {"id":{"name":"Obj_Shooter","path":"objects/Obj_Shooter/Obj_Shooter.yy",},},
     {"id":{"name":"obj_stardust","path":"objects/obj_stardust/obj_stardust.yy",},},
     {"id":{"name":"Obj_SuperBall","path":"objects/Obj_SuperBall/Obj_SuperBall.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Obj_Tutorial","path":"objects/Obj_Tutorial/Obj_Tutorial.yy",},},
+    {"id":{"name":"Obj_TutorialArrow","path":"objects/Obj_TutorialArrow/Obj_TutorialArrow.yy",},},
+    {"id":{"name":"Rm_Game","path":"rooms/Rm_Game/Rm_Game.yy",},},
+    {"id":{"name":"Rm_Tutorial","path":"rooms/Rm_Tutorial/Rm_Tutorial.yy",},},
     {"id":{"name":"Scr_Balls","path":"scripts/Scr_Balls/Scr_Balls.yy",},},
     {"id":{"name":"Scr_Camera","path":"scripts/Scr_Camera/Scr_Camera.yy",},},
     {"id":{"name":"Scr_Enemy","path":"scripts/Scr_Enemy/Scr_Enemy.yy",},},
@@ -122,7 +125,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Rm_Game","path":"rooms/Rm_Game/Rm_Game.yy",},},
+    {"roomId":{"name":"Rm_Tutorial","path":"rooms/Rm_Tutorial/Rm_Tutorial.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
