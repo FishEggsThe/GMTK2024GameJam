@@ -13,4 +13,7 @@ if !global.gameStart {
 
 if newHighScore {
 	DrawGregText("NEW HIGH SCORE!!!", 5, 5+5*(global.fontHeight+6), 3)
+	if setHighScoreName {
+		DrawGregText("You are winner!!", room_width/2, room_height/4, 3, fa_center, fa_middle)
+	}
 }

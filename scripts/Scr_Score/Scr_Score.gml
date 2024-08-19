@@ -66,9 +66,9 @@ function DrawGregText(_string, _x, _y, _size = 3, _halign = fa_left, _valign = f
 	
 }
 
-function HighScoreJudgement(_name, _score = Obj_ScoreSystem.totalScore) {
+function HighScoreJudgement(_score = Obj_ScoreSystem.totalScore) {
 	with Obj_ScoreSystem {
-		var placementIndex = -1
+		placementIndex = -1
 		for(var i = 0; i < 3; i++) {
 			if _score > highScores[i][1] {
 				placementIndex = i; break
@@ -77,22 +77,33 @@ function HighScoreJudgement(_name, _score = Obj_ScoreSystem.totalScore) {
 	
 		if placementIndex > -1 {
 			newHighScore = true
-			
-			for(var i = placementIndex; i < 2; i++) {
-				highScores[i][0] = highScores[i+1][0]
-				highScores[i][1] = highScores[i+1][1]
-			}
-			highScores[placementIndex][0] = _name
-			highScores[placementIndex][1] = _score
-		
-			file = file_text_open_write("dontopenplease.txt")
-			var highScoresString = ""
+			setHighScoreName = true
 			for(var i = 0; i < 3; i++) {
-				highScoresString += highScores[i][0] + "$" + string(highScores[i][1])
-				if i < 2 {highScoresString += "\n"}
+				with instance_create_layer(room_width*(1.5+i*0.5)/4, room_height/2, "Borders", Obj_NameButton) {
+					var size = 5
+					image_xscale = size
+					image_yscale = size
+					nameIndex = i
+				}
 			}
-			file_text_write_string(file, highScoresString)
-			file_text_close(file)
 		}
 	}
+}
+
+function SetHighScore(_name, _score, _place) {
+	for(var i = placementIndex; i < 2; i++) {
+			highScores[i][0] = highScores[i+1][0]
+			highScores[i][1] = highScores[i+1][1]
+		}
+		highScores[placementIndex][0] = _name
+		highScores[placementIndex][1] = Obj_ScoreSystem.totalScore
+		
+	file = file_text_open_write("dontopenplease.txt")
+	var highScoresString = ""
+	for(var i = 0; i < 3; i++) {
+		highScoresString += highScores[i][0] + "$" + string(highScores[i][1])
+		if i < 2 {highScoresString += "\n"}
+	}
+	file_text_write_string(file, highScoresString)
+	file_text_close(file)
 }

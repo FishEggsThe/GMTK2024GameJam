@@ -1,7 +1,7 @@
 if global.debug {draw_text_color(5, 5, "debug mode", c_lime, c_lime, c_green, c_green, 1)}
 
 if global.gameStart {
-	if global.lostGame {
+	if (global.lostGame && !Obj_ScoreSystem.setHighScoreName) {
 		var curve = animcurve_get_channel(AnCv_LoseDrop, "curve1")
 		var percent = clamp(lostGamePercent, 0, 1)
 		var yPos = room_height/2 - animcurve_channel_evaluate(curve, percent)*room_height/2

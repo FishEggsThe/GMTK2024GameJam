@@ -16,7 +16,7 @@ if global.debug {
 // Okay now you can look
 
 if global.gameStart {
-	if global.lostGame {
+	if (global.lostGame && !Obj_ScoreSystem.setHighScoreName) {
 		if keyboard_check_pressed(ord("R")) {
 			room_goto(room)
 		}

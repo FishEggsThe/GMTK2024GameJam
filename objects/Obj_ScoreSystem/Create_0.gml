@@ -3,6 +3,8 @@ setPointsUntilLife = 10000
 pointsUntilLife = setPointsUntilLife
 highScores = [[], [], []]
 newHighScore = false
+setHighScoreName = false
+placementIndex = -1
 	
 file = noone
 var filename = "dontopenplease.txt"

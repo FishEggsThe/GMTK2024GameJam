@@ -12,13 +12,13 @@ function StartFlyAway() {
 }
 
 function LoseGame() {
-	global.lostGame = true
 	with Obj_Shooter {
 		bodySprite = Spr_ShooterSurprised
 		armSprite = Spr_PlayerArmShock
 		instance_create_layer(x+16,y-48,"Particles",obj_shock);
 	}
-	HighScoreJudgement("MTX", Obj_ScoreSystem.totalScore)
+	global.lostGame = true
+	HighScoreJudgement(Obj_ScoreSystem.totalScore)
 	AddScreenShake(4)
 }
 
