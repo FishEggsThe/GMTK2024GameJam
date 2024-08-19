@@ -6,29 +6,22 @@ var height = display_get_gui_height()
 // Left
 // Juice
 juiceFrame += juiceFrameInc
-if juiceFrame >= 18 {juiceFrame-=18}
+if juiceFrame > 17 {juiceFrame-=17}
 var juiceAmount = juice/maxJuice
 var juiceHeight = sprite_get_height(Spr_Juice)
-//var yJuicePos = room_height-320 + juiceHeight-juiceHeight*juiceAmount
-var yJuicePos = room_height-320 + juiceHeight*juiceAmount
+var yJuicePos = room_height-320 + juiceHeight-juiceHeight*juiceAmount
+draw_sprite(Spr_Juice, juiceFrame, 200, room_height-30)
+draw_set_color(#1E1E1E)//#2B0C30
+draw_rectangle(163, room_height-320, 235, yJuicePos, false)
 
-//draw_sprite(Spr_Juice, juiceFrame, 200, room_height-30)
-//draw_set_color(#1E1E1E)//#2B0C30
-//draw_rectangle(163, room_height-320, 235, yJuicePos, false)
-//var colors = array_create(6, c_white)
-//colors[0] = #63AB3F
-//colors[1] = #0098DB
-//colors[2] = #C00946
-//colors[3] = #FFC200
-//colors[4] = #9D5618
-//colors[5] = #FF5277
-var color = choose(#63AB3F, #0098DB, #C00946, #FFC200, #9D5618, #FF5277)
-for(var i = 0; i < 6; i++){
-	if i == 5 {color = c_white}
-	//var color = choose(#63AB3F, #0098DB, #C00946, #FFC200, #9D5618, #FF5277)
-	draw_sprite_ext(Spr_SuperLaser, i, 200, room_height-30, 
-					juiceHeight*juiceAmount, 1, 90, color, 1)
-}
+//var yJuicePos = room_height-320 + juiceHeight*juiceAmount
+//var color = choose(#63AB3F, #0098DB, #C00946, #FFC200, #9D5618, #FF5277)
+//for(var i = 0; i < 5; i++){
+//	if i == 4 {color = c_white}
+//	//var color = choose(#63AB3F, #0098DB, #C00946, #FFC200, #9D5618, #FF5277)
+//	draw_sprite_ext(Spr_SuperLaser, i, 200, room_height-30, 
+//					juiceHeight*juiceAmount, 2.25, 90, color, 1)
+//}
 
 draw_sprite(Spr_JuiceMeter, 0, 200, room_height-30)
 

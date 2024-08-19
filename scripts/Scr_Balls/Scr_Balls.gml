@@ -130,8 +130,10 @@ function MergeBalls(_ball, _targetBall) {
 		_targetBall.flash = setFlash
 		SetBallSquash(1, _targetBall)
 		var colorPick = _targetBall.ballColor[0]
-		with instance_create_layer(_targetBall.x, _targetBall.y, "Particles", obj_BallMergePart) {
-			image_blend = colorPick
+		repeat(6) {
+			with instance_create_layer(_targetBall.x, _targetBall.y, "Particles", obj_BallMergePart) {
+				image_blend = colorPick
+			}
 		}
 	}
 	instance_destroy(_ball)
