@@ -1,2 +1,2 @@
-bodySprite = hi
+bodySprite = Spr_ShooterSad
 global.allowRestart = true
