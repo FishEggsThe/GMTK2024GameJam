@@ -36,9 +36,11 @@ function DrawExplosion() {
 }
 
 function CauseExplosion(_type, _tier){
+	var ball = id
 	with instance_create_layer(x, y, "Particles", Obj_Explosion) {
 		blastType = _type
-		blastDirections = DetermineExplosion(blastType)
+		blastDirections = ball.explosionDirections
+		laserColor = ball.ballColor
 		blastDirectionsSize = array_length(blastDirections)
 		var trueTier = clamp(_tier, 1, 3)
 		blastSize = sprite_get_width(global.ballSprites[trueTier-1])*(_tier==global.numOfBallTiers ? 1.25 : 1)-6
@@ -46,47 +48,6 @@ function CauseExplosion(_type, _tier){
 		damage = _tier + _tier-1
 		AddScreenShake(damage*8)
 	}
-}
-
-function DetermineExplosion(_type){
-	var blastDir = []
-	switch(_type) {
-		case 0:
-			blastDir = ["vert", "hori"]
-			laserColor[0] = #63AB3F
-			break
-		case 1:
-			blastDir = ["hori"]
-			laserColor[0] = #0098DB
-			break
-		case 2:
-			blastDir = ["vert"]
-			laserColor[0] = #C00946
-			break
-		case 3:
-			blastDir = ["slash", "bslash"]
-			laserColor[0] = #FFC200
-			break
-		case 4:
-			blastDir = ["bslash"]
-			laserColor[0] = #9D5618
-			break
-		case 5:
-			blastDir = ["slash"]
-			laserColor[0] = #FF5277 
-			break
-		case 6:
-			blastDir = ["vert", "hori", "slash", "bslash"]
-			laserColor = array_create(6, c_white)
-			laserColor[0] = #63AB3F
-			laserColor[1] = #0098DB
-			laserColor[2] = #C00946
-			laserColor[3] = #FFC200
-			laserColor[4] = #9D5618
-			laserColor[5] = #FF5277 
-			break
-	}
-	return blastDir
 }
 
 function ExplosionCollision(_angle, _width = blastSize) {

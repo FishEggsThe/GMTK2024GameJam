@@ -4,6 +4,9 @@ flying = true
 flash = 0
 setFlash = 3
 
+ballColor = [c_white]
+explosionDirections = []
+
 moveAngle = 90
 moveSpeed = 30
 maxMoveSpeed = 30

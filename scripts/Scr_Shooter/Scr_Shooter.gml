@@ -17,6 +17,7 @@ function ShootBall(_xPos, _yPos, _speed, _type, _angle) {
 		//var dist = point_distance(x, y, xPos, yPos)
 		//moveSpeed = sqrt(2*moveFriction*dist)
 		moveSpeed = _speed
+		explosionDirections = DetermineBall()
 		SetBallSquash(1)
 	}
 	CycleQueue()

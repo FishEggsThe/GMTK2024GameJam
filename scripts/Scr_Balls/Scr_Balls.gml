@@ -20,6 +20,47 @@ function DrawBall(_type, _size = [1, 1], _tier = tier,  _xPos = x, _yPos = y, _f
 		DrawGregText(_type, _xPos, _yPos)
 }
 
+function DetermineBall() {
+var blastDir = []
+	switch(type) {
+		case 0:
+			blastDir = ["vert", "hori"]
+			ballColor[0] = #63AB3F
+			break
+		case 1:
+			blastDir = ["hori"]
+			ballColor[0] = #0098DB
+			break
+		case 2:
+			blastDir = ["vert"]
+			ballColor[0] = #C00946
+			break
+		case 3:
+			blastDir = ["slash", "bslash"]
+			ballColor[0] = #FFC200
+			break
+		case 4:
+			blastDir = ["bslash"]
+			ballColor[0] = #9D5618
+			break
+		case 5:
+			blastDir = ["slash"]
+			ballColor[0] = #FF5277 
+			break
+		case 6:
+			blastDir = ["vert", "hori", "slash", "bslash"]
+			ballColor = array_create(6, c_white)
+			ballColor[0] = #63AB3F
+			ballColor[1] = #0098DB
+			ballColor[2] = #C00946
+			ballColor[3] = #FFC200
+			ballColor[4] = #9D5618
+			ballColor[5] = #FF5277 
+			break
+	}
+	return blastDir
+}
+
 function SetBallSquash(_amount = 1,_ball = id) {
 	_ball.squashPercent = 0
 	_ball.squashAmount = _amount
@@ -88,6 +129,10 @@ function MergeBalls(_ball, _targetBall) {
 		_targetBall.mask_index = global.ballSprites[tier-1]
 		_targetBall.flash = setFlash
 		SetBallSquash(1, _targetBall)
+		var colorPick = _targetBall.ballColor[0]
+		with instance_create_layer(_targetBall.x, _targetBall.y, "Particles", obj_BallMergePart) {
+			image_blend = colorPick
+		}
 	}
 	
 }
