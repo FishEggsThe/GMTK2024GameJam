@@ -1,9 +1,12 @@
-if !global.gameStart {exit}
-
-//draw_set_halign(fa_left)
-//draw_set_valign(fa_top)
-//draw_text_transformed(5, 5, totalScore, 3, 3, 0)
-
-DrawGregText("Score: \n" + string(totalScore), 5, 5, 3)
-//DrawGregText("Round:", room_width-5, 5, 3, fa_right)
-//DrawGregText(Obj_EnemySpawner.difficulty, room_width-5, 5+3*(global.fontHeight+3), 3, fa_right)
+if !global.gameStart {
+	for(var i = 0; i < 3; i++) {
+		var playerName = highScores[i][0]
+		var playerScore = highScores[i][1]
+		var size = 3
+		var yOffset = room_height*5/8 + i*2*size*(global.fontHeight+6)
+		DrawGregText(playerName, room_width/2,yOffset, size, fa_center)
+		DrawGregText(playerScore, room_width/2, yOffset+3, size, fa_center, fa_bottom)
+	}
+} else {
+	DrawGregText("Score: \n" + string(totalScore), 5, 5, 3)
+}
