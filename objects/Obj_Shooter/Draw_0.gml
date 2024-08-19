@@ -11,7 +11,7 @@ if shotPower > 0 {
 	var yVector = -sin(degtorad(shootAngle))
 	var powerPercent = shotPower/shotPowerMax
 	
-	var armDist = sprite_get_width(Spr_PlayerArm)*armExtend
+	var armDist = sprite_get_width(armSprite)*armExtend
 	var xArmDist = xVector*armDist
 	var yArmDist = yVector*armDist
 	

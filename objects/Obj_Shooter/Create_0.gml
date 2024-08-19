@@ -18,6 +18,7 @@ maxJuice = 100
 givenJuicedBall = false
 juiceFrame = 0
 juiceFrameInc = 12/60
+juiceClipSurface = surface_create(82, 298)
 
 playerLives = 3
 

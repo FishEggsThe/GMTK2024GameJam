@@ -1,4 +1,4 @@
-function ShootBall(_speed, _type, _angle) {
+function ShootBall(_xPos, _yPos, _speed, _type, _angle) {
 	var ball = noone
 	if _type == global.numOfBallTypes {
 		ball = instance_create_layer(x, y, "Instances", Obj_SuperBall)

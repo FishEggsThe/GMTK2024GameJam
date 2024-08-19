@@ -32,7 +32,18 @@ if !global.lostGame {
 
 	if (shootReleaseInput && canPower) {
 		var trueShotPower = clamp(shotPower, shotPowerMin, shotPowerTrueMax)
-		ShootBall(trueShotPower, ballQueue[0], shootAngle)
+		
+		// I fucking despise all of you
+		var armExtend = clamp(sqrt(power((mouse_x-x),2)+power((mouse_y-y),2))/150,0.5,1.5)
+		var xVector = cos(degtorad(shootAngle))
+		var yVector = -sin(degtorad(shootAngle))
+		var armDist = sprite_get_width(armSprite)*armExtend
+		var xArmDist = x + xVector*armDist
+		var yArmDist = y + yVector*armDist
+		repeat(10)
+			instance_create_layer(xArmDist, yArmDist, "Particles", obj_stardust)
+		
+		ShootBall(xArmDist*7/8, xArmDist*7/8, trueShotPower, ballQueue[0], shootAngle)
 		shotPower = 0
 		canPower = false
 		canShoot = false
