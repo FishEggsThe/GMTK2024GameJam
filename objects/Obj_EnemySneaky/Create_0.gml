@@ -3,6 +3,6 @@ event_inherited()
 bodySprite = Spr_SneakyEnemy
 eyeSprite = Spr_SneakyEnemyEyes
 
-maxHp = hp
-baseMoveSpeed = moveSpeed
+lastHp = hp
+moveSpeedUp = moveSpeed/3
 enemyColor = #00B000
