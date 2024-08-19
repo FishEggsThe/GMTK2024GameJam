@@ -1,1 +1,2 @@
 bodySprite = hi
+armSprite = noone
