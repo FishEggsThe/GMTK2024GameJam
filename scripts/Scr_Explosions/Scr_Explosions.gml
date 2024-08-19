@@ -122,7 +122,8 @@ function ExplosionCollision(_angle, _width = blastSize) {
 				
 		        if enemy.hp <= 0 {
 					AddScore(enemy.points, ds_list_find_index(blacklist, enemy))
-					AddJuice(damage)
+					var reduceIfSuper = (blastType == global.numOfBallTypes ? 0.01 : 1)
+					AddJuice(damage*reduceIfSuper)
 					EnemyDie(enemy)
 				} else { with enemy {shudder = 15; HitParticle()} }
 			}
