@@ -1,7 +1,7 @@
 event_inherited()
 
 bodySprite = Spr_SneakyEnemy
-enemyEyes = Spr_SneakyEnemyEyes
+eyeSprite = Spr_SneakyEnemyEyes
 
 maxHp = hp
 baseMoveSpeed = moveSpeed

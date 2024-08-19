@@ -6,6 +6,8 @@ enemyPoolsSize = array_length(enemyPools)
 poolIndex = 0
 poolSize = array_length(enemyPools[poolIndex])
 
+difficulty = 1
+
 // Spawn rate
 spawnRateSet = 180
 spawnRate = spawnRateSet
@@ -26,4 +28,12 @@ setSpeed = setSetSpeed
 setHp = 3
 hp = setHp
 
-difficulty = 1
+
+// Ian Code
+// note to self=== hMovement:vMovement should be equivalent to a 2:11 ratio
+hMovement = 0;
+vMovement = 0;
+//xChoice = 0
+//yChoice = 0
+
+//alarm_set(0,20)

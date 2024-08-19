@@ -1,5 +1,6 @@
 bodySprite = Spr_EnemyBody
 bodyIndex = irandom(2)
+eyeSprite = Spr_EnemyEyes
 
 hp = 3
 moveSpeed = 1

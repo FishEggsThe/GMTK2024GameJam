@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_BallMergePart",
+  "%Name":"obj_enemyEyes",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_BallMergePart",
+  "name":"obj_enemyEyes",
   "overriddenProperties":[],
   "parent":{
-    "name":"Particles",
-    "path":"folders/Objects/Particles.yy",
+    "name":"Spawner",
+    "path":"folders/Objects/Enemy/Spawner.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ball",
-    "path":"sprites/spr_ball/spr_ball.yy",
+    "name":"Spr_BigEnemyEyes",
+    "path":"sprites/Spr_BigEnemyEyes/Spr_BigEnemyEyes.yy",
   },
   "spriteMaskId":null,
   "visible":true,

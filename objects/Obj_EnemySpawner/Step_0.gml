@@ -12,9 +12,22 @@ if !global.lostGame {
 	
 		var offset = 38
 		repeat (spawnBurst) {
-			with instance_create_layer(random_range(270+offset, 810-offset), -offset, "Instances", enemyToSpawn) {
+			var enemySpawned = instance_create_layer(random_range(270+offset, 810-offset), -offset, "Instances", enemyToSpawn)
+			with enemySpawned {
 				moveSpeed = Obj_EnemySpawner.setSpeed
 				hp = Obj_EnemySpawner.setHp
+			}
+			
+			// Ian Code (reworked to fit here)
+			// sets spawn point for eyes
+			// increase both values by 270
+			var xChoice = enemySpawned.x
+			// the second value should increase with difficulty
+			var yChoice = enemySpawned.y
+
+			// creates the eye visual
+			with instance_create_layer(xChoice,yChoice,"Instances",obj_enemyEyes) {
+				eyeType = enemySpawned.eyeSprite
 			}
 		}
 		spawnRate = spawnRateSet
@@ -53,3 +66,11 @@ if !global.lostGame {
 		maxToSpawn = setMaxToSpawn
 	}
 }
+
+
+// Ian Code
+// moves this object left and right and up and down
+x += sin(hMovement)*64+256;
+y += sin(vMovement)*1 + y// + difficulty;
+hMovement += 0.015;
+vMovement += 0.09;

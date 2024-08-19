@@ -12,5 +12,5 @@ if global.debug {
 }
 
 
-// No fucking idea why it's not working here specifically
-//DrawGregText("Round: " + string(difficulty), room_width-5, 5, 3, fa_right, fa_top)
+// The object had visible set to false, fuck me
+DrawGregText("Round: " + string(difficulty), room_width-5, 5, 3, fa_right, fa_top)
