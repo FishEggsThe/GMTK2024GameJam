@@ -8,7 +8,7 @@ if !global.lostGame {
 		var spawnBurst = irandom(maxToSpawn)
 		if spawnBurst <= 0 {spawnBurst = 1}
 		numToSpawn-= spawnBurst
-		var enemyToSpawn = enemyPools[enemyPoolsIndex][irandom(enemyPoolSize-1)]
+		var enemyToSpawn = enemyPools[poolIndex][irandom(poolSize-1)]
 	
 		var offset = 38
 		repeat (spawnBurst) {
@@ -40,9 +40,9 @@ if !global.lostGame {
 			setHp++
 			
 		// Enemy Pool
-		if (difficulty%3 == 1 && enemyPoolsIndex < enemyPoolsSize) {
-			enemyPoolsIndex++
-			enemyPoolSize = array_length(enemyPools[enemyPoolsIndex])
+		if (difficulty%3 == 0 && poolIndex < enemyPoolsSize-1) {
+			poolIndex++
+			poolSize = array_length(enemyPools[poolIndex])
 		}
 	
 		// Max spawns at a time

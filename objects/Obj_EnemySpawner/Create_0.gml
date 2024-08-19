@@ -1,10 +1,10 @@
 enemyPools = [[Obj_Enemy],
 			  [Obj_Enemy, Obj_Enemy, Obj_EnemySide],
-			  [Obj_Enemy, Obj_Enemy, Obj_EnemySide, Obj_EnemySneaky],
-			  [Obj_Enemy, Obj_Enemy, Obj_EnemySide, Obj_EnemySneaky, Obj_EnemySneaky]]
-enemyPoolsIndex = 0
+			  [Obj_Enemy, Obj_Enemy, Obj_EnemySide, Obj_EnemySide_1],
+			  [Obj_Enemy, Obj_Enemy, Obj_EnemySide, Obj_EnemySide_1, Obj_EnemySide_1]]
 enemyPoolsSize = array_length(enemyPools)
-enemyPoolSize = array_length(enemyPools[enemyPoolsIndex])
+poolIndex = 0
+poolSize = array_length(enemyPools[poolIndex])
 
 // Spawn rate
 spawnRateSet = 180

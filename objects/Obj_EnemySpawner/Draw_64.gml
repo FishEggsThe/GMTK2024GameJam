@@ -10,3 +10,7 @@ if global.debug {
 	roundStats += "Current Wave: " + string(numToSpawn)
 	DrawGregText(roundStats, 5, 100)
 }
+
+
+// No fucking idea why it's not working here specifically
+//DrawGregText("Round: " + string(difficulty), room_width-5, 5, 3, fa_right, fa_top)

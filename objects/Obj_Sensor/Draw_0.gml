@@ -1,3 +1,4 @@
+image_alpha = global.debug
 if global.debug {
 	draw_self()
 
