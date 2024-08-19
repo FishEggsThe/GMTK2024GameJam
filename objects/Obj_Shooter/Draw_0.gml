@@ -1,6 +1,7 @@
 // Arm
+var armExtend = 1
 if (global.gameStart && !global.allowRestart) {
-	var armExtend = clamp(sqrt(power((mouse_x-x),2)+power((mouse_y-y),2))/150,0.5,1.5)
+	armExtend = clamp(sqrt(power((mouse_x-x),2)+power((mouse_y-y),2))/150,0.5,1.5)
 	draw_sprite_ext(armSprite, 0, x, y, armExtend, 1, shootAngle, c_white, 1)
 }
 

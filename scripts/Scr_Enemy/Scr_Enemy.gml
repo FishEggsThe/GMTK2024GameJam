@@ -23,9 +23,8 @@ function LoseGame() {
 
 function HitParticle(_color = enemyColor) {
 	repeat(5){
-		instance_create_layer(x+floor(random_range(-16,16)),
-		y+floor(random_range(-16,16)),
-		"Particles",obj_HitPart);
+		var particle = instance_create_layer(x+floor(random_range(-16,16)),y+floor(random_range(-16,16)),"Particles",obj_HitPart);
+		particle.image_blend = _color
 	}
 }
 
