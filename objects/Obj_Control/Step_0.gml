@@ -28,6 +28,6 @@ if global.gameStart {
 	
 	if mouse_check_button_pressed(mb_left) {
 		global.gameStart = true
-		Obj_Shooter.alarm[2] = 1
+		Obj_Shooter.alarm[0] = 1
 	}
 }
