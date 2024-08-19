@@ -34,33 +34,35 @@ if !global.lostGame {
 	}
 
 	// Difficulty increase
+	// The if statements check if the stat can go lower/higher than the threshold
+	// Then, if it has it, it checks how many rounds have passed
 	if numToSpawn <= 0 {
 		difficulty++
 		// Spawn rate
-		if spawnRateSet > 20
-			spawnRateSet -= 20
+		if (spawnRateSet > 20 && difficulty%3 == 0)
+			spawnRateSet -= 10
+			
+		// Max spawns at a time
+		if (spawnRateSet%60 == 0 && difficulty%3 = 0)
+			setMaxToSpawn++
 		
 		// Wave size
-		if setNumToSpawn < 72
+		if (setNumToSpawn < 72 && difficulty%3 = 0)
 			setNumToSpawn += 3
 		
 		// Enemy speed
-		if (difficulty%3 = 0 && setSetSpeed < 1.5)
+		if (setSetSpeed < 1.5 && difficulty%4 = 0)
 			setSetSpeed += 0.25
 		
 		// Enemy health
-		if (setHp < 9 && difficulty%3 == 1)
+		if (setHp < 10 && difficulty%3 == 3)
 			setHp++
 			
 		// Enemy Pool
-		if (difficulty%3 == 0 && poolIndex < enemyPoolsSize-1) {
+		if (poolIndex < enemyPoolsSize-1 && difficulty%3 == 0) {
 			poolIndex++
 			poolSize = array_length(enemyPools[poolIndex])
 		}
-	
-		// Max spawns at a time
-		if spawnRateSet % 60 == 0
-			setMaxToSpawn++
 	
 		numToSpawn = setNumToSpawn
 		maxToSpawn = setMaxToSpawn

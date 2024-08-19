@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_EnemySide_1",
+  "%Name":"Obj_EnemySneaky",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Obj_EnemySide_1",
+  "name":"Obj_EnemySneaky",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemy",
-    "path":"folders/Objects/Enemy.yy",
+    "name":"Spawner",
+    "path":"folders/Objects/Enemy/Spawner.yy",
   },
   "parentObjectId":{
     "name":"Obj_Enemy",

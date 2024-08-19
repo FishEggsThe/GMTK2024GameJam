@@ -9,8 +9,8 @@
   "name":"obj_enemyEyes",
   "overriddenProperties":[],
   "parent":{
-    "name":"Spawner",
-    "path":"folders/Objects/Enemy/Spawner.yy",
+    "name":"Particles",
+    "path":"folders/Objects/Particles.yy",
   },
   "parentObjectId":null,
   "persistent":false,

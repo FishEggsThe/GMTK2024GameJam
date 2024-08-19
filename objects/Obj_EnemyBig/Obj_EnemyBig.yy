@@ -8,8 +8,8 @@
   "name":"Obj_EnemyBig",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemy",
-    "path":"folders/Objects/Enemy.yy",
+    "name":"Spawner",
+    "path":"folders/Objects/Enemy/Spawner.yy",
   },
   "parentObjectId":{
     "name":"Obj_Enemy",
