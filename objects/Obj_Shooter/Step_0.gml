@@ -1,3 +1,5 @@
+if !global.gameStart {exit}
+
 if !global.lostGame {
 	var shootPressedInput = mouse_check_button_pressed(mb_left)
 	var shootReleaseInput = mouse_check_button_released(mb_left)

@@ -15,6 +15,12 @@ if global.debug {
 }
 // Okay now you can look
 
-var toggleCursorInput = ord("F")
-var toggleCursorSize = keyboard_check_pressed(toggleCursorInput)
-if toggleCursorSize {cursorSizeType = 1-cursorSizeType}
+if !global.gameStart {
+	var toggleCursorInput = ord("F")
+	var toggleCursorSize = keyboard_check_pressed(toggleCursorInput)
+	if toggleCursorSize {cursorSizeType = 1-cursorSizeType}
+	
+	if mouse_check_button_pressed(mb_left) {
+		global.gameStart = true
+	}
+}

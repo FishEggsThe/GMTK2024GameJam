@@ -1,3 +1,5 @@
+if !global.gameStart {exit}
+
 if !global.lostGame {
 	// Regular spawning
 	spawnRate--
