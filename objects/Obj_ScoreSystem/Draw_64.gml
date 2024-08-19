@@ -12,5 +12,5 @@ if !global.gameStart {
 }
 
 if newHighScore {
-	DrawGregText("NEW HIGH SCORE!!!", 5, 5+5*(global.fontHeight+6), 5)
+	DrawGregText("NEW HIGH SCORE!!!", 5, 5+5*(global.fontHeight+6), 3)
 }

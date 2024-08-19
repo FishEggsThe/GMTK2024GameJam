@@ -29,5 +29,6 @@ if global.gameStart {
 	if mouse_check_button_pressed(mb_left) {
 		global.gameStart = true
 		Obj_Shooter.alarm[0] = 1
+		layer_background_destroy(layer_background_get_id("Background_Grid"))
 	}
 }
