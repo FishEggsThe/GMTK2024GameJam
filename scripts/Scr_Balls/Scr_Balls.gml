@@ -116,10 +116,10 @@ function MoveBall() {
 }
 
 function MergeBalls(_ball, _targetBall) {
+	_ball.merger = true
 	_targetBall.tier += _ball.tier
 	_targetBall.moveAngle = _ball.moveAngle
 	_targetBall.moveSpeed = _ball.moveSpeed/4
-	instance_destroy(_ball)
 	
 	if _targetBall.tier > global.numOfBallTiers {
 		//_targetBall.tier = 3
@@ -134,10 +134,11 @@ function MergeBalls(_ball, _targetBall) {
 			image_blend = colorPick
 		}
 	}
+	instance_destroy(_ball)
 	
 }
 
 function ExplodeBall(_explodeBall = id) {
-	CauseExplosion(_explodeBall.type, _explodeBall.tier)
+	CauseExplosion(_explodeBall)
 	instance_destroy(_explodeBall)
 }

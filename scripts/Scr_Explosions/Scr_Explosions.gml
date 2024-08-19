@@ -35,17 +35,18 @@ function DrawExplosion() {
 	}
 }
 
-function CauseExplosion(_type, _tier){
+function CauseExplosion(_ball){
 	var ball = id
 	with instance_create_layer(x, y, "Particles", Obj_Explosion) {
-		blastType = _type
+		blastType = _ball.type
 		blastDirections = ball.explosionDirections
 		laserColor = ball.ballColor
 		blastDirectionsSize = array_length(blastDirections)
-		var trueTier = clamp(_tier, 1, 3)
-		blastSize = sprite_get_width(global.ballSprites[trueTier-1])*(_tier==global.numOfBallTiers ? 1.25 : 1)-6
+		
+		var trueTier = clamp(_ball.tier, 1, 3)
+		blastSize = sprite_get_width(global.ballSprites[trueTier-1])*(_ball.type==global.numOfBallTiers ? 1.25 : 1)-6
 		laserWidth = blastSize / sprite_get_height(laserSprite)
-		damage = _tier + _tier-1
+		damage = _ball.tier + _ball.tier-1
 		AddScreenShake(damage*8)
 	}
 }
@@ -60,7 +61,7 @@ function ExplosionCollision(_angle, _width = blastSize) {
 	var dmg = damage
 	if allowChain {
 		with Obj_Ball {
-			if place_meeting(x, y, Obj_Sensor) {
+			if place_meeting(x, y, Obj_Sensor) && !merger {
 				if tier < dmg {ExplodeBall()}
 				else {shudder = dmg}
 			}

@@ -6,6 +6,7 @@ setFlash = 3
 
 ballColor = [c_white]
 explosionDirections = []
+merger = false
 
 moveAngle = 90
 moveSpeed = 30
