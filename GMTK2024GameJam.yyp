@@ -79,6 +79,7 @@
     {"id":{"name":"hi","path":"sprites/hi/hi.yy",},},
     {"id":{"name":"mockup","path":"sprites/mockup/mockup.yy",},},
     {"id":{"name":"Spr_Background","path":"sprites/Spr_Background/Spr_Background.yy",},},
+    {"id":{"name":"Spr_BackgroundGrid","path":"sprites/Spr_BackgroundGrid/Spr_BackgroundGrid.yy",},},
     {"id":{"name":"spr_ball","path":"sprites/spr_ball/spr_ball.yy",},},
     {"id":{"name":"Spr_BallFlash","path":"sprites/Spr_BallFlash/Spr_BallFlash.yy",},},
     {"id":{"name":"Spr_Balls1","path":"sprites/Spr_Balls1/Spr_Balls1.yy",},},

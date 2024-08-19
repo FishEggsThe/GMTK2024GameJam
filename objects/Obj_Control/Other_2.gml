@@ -7,7 +7,7 @@ global.numOfBallTiers = array_length(global.ballSprites)
 global.fontSprite = Spr_Font
 global.fontWidth = sprite_get_width(global.fontSprite)
 global.fontHeight = sprite_get_height(global.fontSprite)
-global.fontContains = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,():;!?/'\"<>"
+global.fontContains = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,():;!?/'\"<>[]{}#@%-_*"
 global.containsLength = string_length(global.fontContains)
 
 global.gameStart = false
