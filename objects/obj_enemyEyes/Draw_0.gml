@@ -1,0 +1,1 @@
+draw_sprite(eyeType, 0, x, y)

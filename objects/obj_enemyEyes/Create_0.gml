@@ -3,8 +3,7 @@ image_speed = 0;
 image_alpha = 0;
 imageScale = 0
 
-eyeType = Spr_EnemyEyes;
-sprite_index = eyeType
+eyeType = Spr_EnemyEyes
 
 // Fish's note: Comments below is code not needed
 
