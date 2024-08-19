@@ -36,17 +36,24 @@ function DrawExplosion() {
 }
 
 function CauseExplosion(_ball){
-	var ball = id
 	with instance_create_layer(x, y, "Particles", Obj_Explosion) {
 		blastType = _ball.type
-		blastDirections = ball.explosionDirections
-		laserColor = ball.ballColor
+		blastDirections = _ball.explosionDirections
+		laserColor = _ball.ballColor
 		blastDirectionsSize = array_length(blastDirections)
 		
 		var trueTier = clamp(_ball.tier, 1, 3)
 		blastSize = sprite_get_width(global.ballSprites[trueTier-1])*(_ball.type==global.numOfBallTiers ? 1.25 : 1)-6
 		laserWidth = blastSize / sprite_get_height(laserSprite)
 		damage = _ball.tier + _ball.tier-1
+		
+		var explode = id
+		var colorI = array_length(laserColor) > 1
+		for(var i = 0; i < 6; i++) {
+			with instance_create_layer(_ball.x, _ball.y, "Particles", obj_BallMergePart) {
+				image_blend = explode.laserColor[i*colorI]
+			}
+		}
 		AddScreenShake(damage*8)
 	}
 }
