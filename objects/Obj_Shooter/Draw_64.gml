@@ -1,3 +1,5 @@
+if !global.gameStart {exit}
+
 var width = display_get_gui_width()
 var height = display_get_gui_height()
 

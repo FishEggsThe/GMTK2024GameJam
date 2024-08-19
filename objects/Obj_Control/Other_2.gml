@@ -12,6 +12,7 @@ global.containsLength = string_length(global.fontContains)
 
 global.gameStart = false
 global.lostGame = false
+global.allowRestart = false
 
 image_alpha = 0.25
 

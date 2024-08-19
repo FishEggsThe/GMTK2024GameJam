@@ -1,4 +1,4 @@
-if !global.lostGame {
+if !global.lostGame || gotLunch {
 	moveSpeed += moveSpeedInc
 	y += moveSpeed
 

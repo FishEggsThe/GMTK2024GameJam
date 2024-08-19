@@ -1,2 +1,2 @@
 bodySprite = hi
-armSprite = noone
+global.allowRestart = true

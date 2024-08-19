@@ -15,7 +15,13 @@ if global.debug {
 }
 // Okay now you can look
 
-if !global.gameStart {
+if global.gameStart {
+	if global.lostGame {
+		if keyboard_check_pressed(ord("R")) {
+			room_goto(room)
+		}
+	}
+} else {
 	var toggleCursorInput = ord("F")
 	var toggleCursorSize = keyboard_check_pressed(toggleCursorInput)
 	if toggleCursorSize {cursorSizeType = 1-cursorSizeType}
