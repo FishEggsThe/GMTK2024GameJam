@@ -17,3 +17,5 @@ for(var i = 0; i < blastDirectionsSize; i++) {
 		break
 	}
 }
+
+allowChain = false

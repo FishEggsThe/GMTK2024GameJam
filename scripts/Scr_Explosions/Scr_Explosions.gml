@@ -97,10 +97,12 @@ function ExplosionCollision(_angle, _width = blastSize) {
 	sensor.image_yscale = blastSize / sprite_get_height(Spr_Sensor)
 	
 	var dmg = damage
-	with Obj_Ball {
-		if place_meeting(x, y, Obj_Sensor) {
-			if tier < dmg {ExplodeBall()}
-			else {shudder = dmg}
+	if allowChain {
+		with Obj_Ball {
+			if place_meeting(x, y, Obj_Sensor) {
+				if tier < dmg {ExplodeBall()}
+				else {shudder = dmg}
+			}
 		}
 	}
 	
