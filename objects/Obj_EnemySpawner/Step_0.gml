@@ -23,12 +23,14 @@ if !global.lostGame {
 			// increase both values by 270
 			var xChoice = enemySpawned.x
 			// the second value should increase with difficulty
-			var yChoice = enemySpawned.y
+			var yChoice = 30+random(40)
+			//var yChoice = enemySpawned.y+offset*4
 
 			// creates the eye visual
-			with instance_create_layer(xChoice,yChoice+offset*4,"Particles",obj_enemyEyes) {
+			with instance_create_layer(xChoice,yChoice,"Particles",obj_enemyEyes) {
 				eyeType = enemySpawned.eyeSprite
 			}
+			// Ian Code end
 		}
 		spawnRate = spawnRateSet
 	}

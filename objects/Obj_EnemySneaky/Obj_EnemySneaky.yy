@@ -9,8 +9,8 @@
   "name":"Obj_EnemySneaky",
   "overriddenProperties":[],
   "parent":{
-    "name":"Spawner",
-    "path":"folders/Objects/Enemy/Spawner.yy",
+    "name":"Enemies",
+    "path":"folders/Objects/Enemy/Enemies.yy",
   },
   "parentObjectId":{
     "name":"Obj_Enemy",
