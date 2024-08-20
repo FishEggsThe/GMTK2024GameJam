@@ -3,14 +3,16 @@ function DrawBall(_type, _size = [1, 1], _tier = tier,  _xPos = x, _yPos = y, _f
 	gpu_set_fog(_flash, c_white, 0, 1000)
 	
 	// Regular Ball
-	if _type < 6
+	if _type < 6 {
+		draw_sprite_ext(global.ballSprites[trueTier-1], _type, _xPos+2*_size[0], _yPos+2*_size[1], _size[0], _size[1], 0, c_black, 1)
 		draw_sprite_ext(global.ballSprites[trueTier-1], _type, _xPos, _yPos, _size[0], _size[1], 0, c_white, 1)
 	// Super Ball
-	else {
+	} else {
 		var drawSuperBall = Spr_SuperBall
 		if object_index == Obj_Shooter
 			drawSuperBall = Spr_SmallSuperBall
-			
+		
+		draw_sprite_ext(drawSuperBall, 0, _xPos+2*_size[0], _yPos+2*_size[1], _size[0], _size[1], 0, c_black, 1)
 		draw_sprite_ext(drawSuperBall, 0, _xPos, _yPos, _size[0], _size[1], 0, c_white, 1)
 	}
 		

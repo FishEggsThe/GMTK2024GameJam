@@ -5,6 +5,7 @@ if shudder > 0 {
 	yPos += random_range(-shudder, shudder)
 	shudder--
 }
+draw_sprite_ext(bodySprite, bodyIndex, xPos+5, yPos+5, 1, 1, rotate*sin(degtorad(rotate*4)), c_black, 1)
 draw_sprite_ext(bodySprite, bodyIndex, xPos, yPos, 1, 1, rotate*sin(degtorad(rotate*4)), c_white, 1)
 
 var range = 14

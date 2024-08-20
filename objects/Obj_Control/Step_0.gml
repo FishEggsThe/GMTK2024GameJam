@@ -25,7 +25,7 @@ if global.gameStart {
 	if keyboard_check_pressed(ord("F")) {cursorSizeType = 1-cursorSizeType}
 	if keyboard_check_pressed(vk_space) {room_goto(Rm_Tutorial)}
 	
-	if mouse_check_button_pressed(mb_left) {
+	if keyboard_check_pressed(ord("E")) {
 		global.gameStart = true
 		Obj_Shooter.alarm[0] = 1
 		layer_background_destroy(layer_background_get_id("Background_Grid"))

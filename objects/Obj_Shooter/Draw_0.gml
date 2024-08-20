@@ -2,6 +2,7 @@
 var armExtend = 1
 if (global.gameStart && !global.allowRestart) {
 	armExtend = clamp(sqrt(power((mouse_x-x),2)+power((mouse_y-y),2))/150,0.5,1.5)
+	draw_sprite_ext(armSprite, 0, x+5, y+5, armExtend, 1, shootAngle, c_black, 1)
 	draw_sprite_ext(armSprite, 0, x, y, armExtend, 1, shootAngle, c_white, 1)
 }
 
@@ -12,6 +13,7 @@ if global.allowRestart {
 		image_speed = 0
 	}
 }
+draw_sprite_ext(bodySprite, image_index, x+5, y+5, 1, 1, 0, c_black, 1)
 draw_sprite(bodySprite, image_index, x, y)
 
 // Dotted Line

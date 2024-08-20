@@ -7,7 +7,7 @@ function AddScore(_points, spotCheck = 0, tier = 0){
 	Obj_ScoreSystem.pointsUntilLife -= _points*multiplier
 }
 
-function DrawGregText(_string, _x, _y, _size = 3, _halign = fa_left, _valign = fa_top, _color = c_white) {
+function DrawGregText(_string, _x, _y, _size = 3, _halign = fa_left, _valign = fa_top, _outline = true) {
 	var trueString = ""
 	trueString = string(_string)
 	trueString = string_upper(trueString)
@@ -58,8 +58,12 @@ function DrawGregText(_string, _x, _y, _size = 3, _halign = fa_left, _valign = f
 			}
 		}
 		if characterIndex > -1 {
+			if _outline
+				draw_sprite_ext(global.fontSprite, characterIndex, _x+xOffset+_size*2, _y+yOffset+_size*2, 
+								_size, _size, 0, c_black, 1)
+			
 			draw_sprite_ext(global.fontSprite, characterIndex, _x+xOffset, _y+yOffset, 
-							_size, _size, 0, _color, 1)
+							_size, _size, 0, c_white, 1)
 		}
 		xOffset += global.fontWidth*_size
 	}

@@ -8,7 +8,7 @@ placementIndex = -1
 	
 file = noone
 var filename = "dontopenplease.txt"
-//file_delete(filename)
+file_delete(filename)
 
 show_debug_message(file_exists("dontopenplease.txt"))
 if !file_exists("dontopenplease.txt") {
