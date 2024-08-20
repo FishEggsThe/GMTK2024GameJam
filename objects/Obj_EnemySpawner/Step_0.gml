@@ -16,8 +16,9 @@ if !global.lostGame {
 		repeat (spawnBurst) {
 			var enemySpawned = instance_create_layer(random_range(270+offset, 810-offset), -offset, "Instances", enemyToSpawn)
 			with enemySpawned {
-				moveSpeed = Obj_EnemySpawner.setSpeed / 2*(object_index == Obj_EnemyBig)
-				hp = Obj_EnemySpawner.setHp * 2*(object_index == Obj_EnemyBig)
+				var isBig = (object_index == Obj_EnemyBig)
+				moveSpeed = Obj_EnemySpawner.setSpeed / 2*isBig
+				hp = round(Obj_EnemySpawner.setHp * (2+1/3)*isBig)
 				
 			}
 			

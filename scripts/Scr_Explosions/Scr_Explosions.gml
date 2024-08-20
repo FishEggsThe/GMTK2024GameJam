@@ -38,7 +38,7 @@ function DrawExplosion() {
 function CauseExplosion(_ball){
 	with instance_create_layer(x, y, "Particles", Obj_Explosion) {
 		blastType = _ball.type
-		blastReach = (_ball.tier == 1? 250 : room_width)
+		blastReach = 250 * _ball.tier
 		blastDirections = _ball.explosionDirections
 		laserColor = _ball.ballColor
 		blastDirectionsSize = array_length(blastDirections)

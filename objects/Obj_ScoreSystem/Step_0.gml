@@ -1,7 +1,7 @@
 if pointsUntilLife <= 0 {
 	Obj_Shooter.playerLives++
+	setPointsUntilLife *= 2
 	pointsUntilLife += setPointsUntilLife
-	setPointsUntilLife*=2
 }
 
 if setHighScoreName {
