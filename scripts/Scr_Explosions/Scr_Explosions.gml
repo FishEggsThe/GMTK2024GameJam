@@ -28,7 +28,7 @@ function DrawExplosion() {
 			for (var face = -1; face <= 1; face+=2) {
 				var pickColor = (i < 5-1 ? laserColor[irandom(totalColors)] : c_white)
 				var laserLife = laserWidth*alarm[0]/alarmSet
-				draw_sprite_ext(laserSprite, i, x, y, room_width*face, laserLife, rotation, pickColor, 1)
+				draw_sprite_ext(laserSprite, i, x, y, blastReach*face, laserLife, rotation, pickColor, 1)
 			}
 		
 		}
@@ -38,6 +38,7 @@ function DrawExplosion() {
 function CauseExplosion(_ball){
 	with instance_create_layer(x, y, "Particles", Obj_Explosion) {
 		blastType = _ball.type
+		blastReach = (_ball.tier == 1? 250 : room_width)
 		blastDirections = _ball.explosionDirections
 		laserColor = _ball.ballColor
 		blastDirectionsSize = array_length(blastDirections)
@@ -62,7 +63,7 @@ function ExplosionCollision(_angle, _width = blastSize) {
 	var sensor = Obj_Sensor
 	sensor.x = x; sensor.y = y
 	sensor.image_angle = _angle
-	sensor.image_xscale = room_height*2
+	sensor.image_xscale = blastReach
 	sensor.image_yscale = blastSize / sprite_get_height(Spr_Sensor)
 	
 	var dmg = damage
