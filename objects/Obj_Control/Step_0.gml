@@ -18,14 +18,22 @@ if global.debug {
 if global.gameStart {
 	if (global.lostGame && !Obj_ScoreSystem.setHighScoreName) {
 		if keyboard_check_pressed(ord("R")) {
+			audio_play_sound(Snd_ButtonPress, 0, false)
 			room_goto(room)
 		}
 	}
 } else {
-	if keyboard_check_pressed(ord("F")) {cursorSizeType = 1-cursorSizeType}
-	if keyboard_check_pressed(vk_space) {room_goto(Rm_Tutorial)}
+	if keyboard_check_pressed(ord("F")) {
+		cursorSizeType = 1-cursorSizeType
+		audio_play_sound(Snd_ButtonPress, 0, false)
+	}
+	if keyboard_check_pressed(vk_space) {
+		audio_play_sound(Snd_ButtonPress, 0, false)
+		room_goto(Rm_Tutorial)
+	}
 	
 	if keyboard_check_pressed(ord("E")) {
+		audio_play_sound(Snd_ButtonPress, 0, false)
 		global.gameStart = true
 		Obj_Shooter.alarm[0] = 1
 		layer_background_destroy(layer_background_get_id("Background_Grid"))

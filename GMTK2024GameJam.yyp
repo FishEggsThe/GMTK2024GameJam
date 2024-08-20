@@ -80,6 +80,8 @@
     {"id":{"name":"Scr_Explosions","path":"scripts/Scr_Explosions/Scr_Explosions.yy",},},
     {"id":{"name":"Scr_Score","path":"scripts/Scr_Score/Scr_Score.yy",},},
     {"id":{"name":"Scr_Shooter","path":"scripts/Scr_Shooter/Scr_Shooter.yy",},},
+    {"id":{"name":"Snd_BallHit","path":"sounds/Snd_BallHit/Snd_BallHit.yy",},},
+    {"id":{"name":"Snd_ButtonPress","path":"sounds/Snd_ButtonPress/Snd_ButtonPress.yy",},},
     {"id":{"name":"chives","path":"sprites/chives/chives.yy",},},
     {"id":{"name":"hi","path":"sprites/hi/hi.yy",},},
     {"id":{"name":"mockup","path":"sprites/mockup/mockup.yy",},},

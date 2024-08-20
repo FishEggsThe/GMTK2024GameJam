@@ -84,11 +84,13 @@ function MoveBall() {
 		xSpeed *= -1
 		xBounced *= -1
 		SetBallSquash(moveSpeed/maxMoveSpeed)
+		audio_play_sound(Snd_BallHit, 0, false)
 	}
 	if (y+ySpeed < 0 || y+ySpeed > room_height) {
 		ySpeed *= -1
 		yBounced *= -1
 		SetBallSquash(moveSpeed/maxMoveSpeed)
+		audio_play_sound(Snd_BallHit, 0, false)
 	}
 	
 	var ballTouched = instance_place(x+xSpeed, y+ySpeed, Obj_Ball)
@@ -98,6 +100,7 @@ function MoveBall() {
 		}
 		else {
 			//timesBounced++
+			audio_play_sound(Snd_BallHit, 0, false)
 			var ToucherAngle = point_direction(ballTouched.x, ballTouched.y, x, y)
 			var ToucheeAngle = ToucherAngle-180
 			var weightRatio = (tier / ballTouched.tier)// / timesBounced
