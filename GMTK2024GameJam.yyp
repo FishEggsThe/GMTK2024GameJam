@@ -80,6 +80,8 @@
     {"id":{"name":"Scr_Explosions","path":"scripts/Scr_Explosions/Scr_Explosions.yy",},},
     {"id":{"name":"Scr_Score","path":"scripts/Scr_Score/Scr_Score.yy",},},
     {"id":{"name":"Scr_Shooter","path":"scripts/Scr_Shooter/Scr_Shooter.yy",},},
+    {"id":{"name":"Msc_Game","path":"sounds/Msc_Game/Msc_Game.yy",},},
+    {"id":{"name":"Msc_Menu","path":"sounds/Msc_Menu/Msc_Menu.yy",},},
     {"id":{"name":"Snd_BallHit","path":"sounds/Snd_BallHit/Snd_BallHit.yy",},},
     {"id":{"name":"Snd_ButtonPress","path":"sounds/Snd_ButtonPress/Snd_ButtonPress.yy",},},
     {"id":{"name":"Snd_Explode1","path":"sounds/Snd_Explode1/Snd_Explode1.yy",},},

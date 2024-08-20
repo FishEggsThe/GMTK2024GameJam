@@ -34,6 +34,8 @@ if global.gameStart {
 	
 	if keyboard_check_pressed(ord("E")) {
 		audio_play_sound(Snd_ButtonPress, 0, false)
+		audio_stop_sound(Msc_Menu)
+		audio_play_sound(Msc_Game, 0, true)
 		global.gameStart = true
 		Obj_Shooter.alarm[0] = 1
 		layer_background_destroy(layer_background_get_id("Background_Grid"))

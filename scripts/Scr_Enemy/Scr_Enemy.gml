@@ -20,6 +20,7 @@ function LoseGame() {
 	}
 	global.lostGame = true
 	audio_play_sound(Snd_Lose, 5, false)
+		audio_pause_sound(Msc_Game)
 	HighScoreJudgement(Obj_ScoreSystem.totalScore)
 	AddScreenShake(4)
 }

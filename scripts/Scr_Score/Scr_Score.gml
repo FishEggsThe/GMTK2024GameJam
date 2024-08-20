@@ -102,7 +102,7 @@ function SetHighScore(_name, _score, _place) {
 	highScores[placementIndex][0] = _name
 	highScores[placementIndex][1] = Obj_ScoreSystem.totalScore
 		
-	var directory = program_directory
+	var directory = ""//program_directory
 	file = file_text_open_write(directory + "highscores.txt")
 	var highScoresString = ""
 	for(var i = 0; i < 3; i++) {
