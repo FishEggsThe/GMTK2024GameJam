@@ -16,8 +16,9 @@ if !global.lostGame {
 		repeat (spawnBurst) {
 			var enemySpawned = instance_create_layer(random_range(270+offset, 810-offset), -offset, "Instances", enemyToSpawn)
 			with enemySpawned {
-				moveSpeed = Obj_EnemySpawner.setSpeed
-				hp = Obj_EnemySpawner.setHp
+				moveSpeed = Obj_EnemySpawner.setSpeed / 2*(object_index == Obj_EnemyBig)
+				hp = Obj_EnemySpawner.setHp * 2*(object_index == Obj_EnemyBig)
+				
 			}
 			
 			// Ian Code (reworked to fit here)
@@ -47,19 +48,19 @@ if !global.lostGame {
 			spawnRateSet -= 10
 			
 		// Max spawns at a time
-		if (spawnRateSet%60 == 0 && difficulty%3 = 0)
+		if (spawnRateSet%60 == 0 && difficulty%3 == 0)
 			setMaxToSpawn++
 		
 		// Wave size
-		if (setNumToSpawn < 72 && difficulty%3 = 0)
+		if (setNumToSpawn < 72 && difficulty%3 == 0)
 			setNumToSpawn += 3
 		
 		// Enemy speed
-		if (setSetSpeed < 1.5 && difficulty%4 = 0)
+		if (setSetSpeed < 1.5 && difficulty%3 == 0)
 			setSetSpeed += 0.25
 		
 		// Enemy health
-		if (setHp < 10 && difficulty%3 == 3)
+		if (setHp < 10 && difficulty%3 == 0)
 			setHp++
 			
 		// Enemy Pool

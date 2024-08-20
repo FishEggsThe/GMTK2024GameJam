@@ -1,7 +1,7 @@
-enemyPools = [[Obj_Enemy],
+enemyPools = [[Obj_EnemyBig],
 			  [Obj_Enemy, Obj_Enemy, Obj_EnemySide],
 			  [Obj_Enemy, Obj_Enemy, Obj_EnemySide, Obj_EnemySneaky],
-			  [Obj_Enemy, Obj_Enemy, Obj_EnemySide, Obj_EnemySneaky, Obj_EnemySneaky]]
+			  [Obj_Enemy, Obj_Enemy, Obj_EnemySide, Obj_EnemySide, Obj_EnemySneaky, Obj_EnemyBig]]
 enemyPoolsSize = array_length(enemyPools)
 poolIndex = 0
 poolSize = array_length(enemyPools[poolIndex])
