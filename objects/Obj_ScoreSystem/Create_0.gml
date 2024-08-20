@@ -17,7 +17,7 @@ if !file_exists(filename) {
 		highScoresString +="IAN$40000\n"
 		highScoresString +="!?#$1"
 	file_text_write_string(file, highScoresString)
-	file_text_close(file)
+	//file_text_close(file)
 }
 
 //show_debug_message(game_save_id)
