@@ -10,7 +10,7 @@ poolSize = array_length(enemyPools[poolIndex])
 difficulty = 1
 
 // Spawn rate
-spawnRateSet = 180
+spawnRateSet = 210
 spawnRate = spawnRateSet
 
 // Wave size

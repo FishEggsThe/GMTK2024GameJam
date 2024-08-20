@@ -50,7 +50,7 @@ if !global.lostGame {
 		difficulty++
 		// Spawn rate
 		if (spawnRateSet > 20 && difficulty%3 == 0)
-			spawnRateSet -= 10
+			spawnRateSet -= 15
 			
 		// Max spawns at a time
 		if (spawnRateSet%60 == 0 && difficulty%3 == 0)
@@ -62,10 +62,10 @@ if !global.lostGame {
 		
 		// Enemy speed
 		if (setSetSpeed < 1.5 && difficulty%6 == 0)
-			setSetSpeed += 0.25
+			setSetSpeed += 0.5
 		
 		// Enemy health
-		if (setHp < 10 && difficulty%6 == 0)
+		if (setHp < 10 && difficulty%8 == 0)
 			setHp++
 			
 		// Enemy Pool
