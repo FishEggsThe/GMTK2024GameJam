@@ -61,7 +61,7 @@ if !global.lostGame {
 			setNumToSpawn += 3
 		
 		// Enemy speed
-		if (setSetSpeed < 1.5 && difficulty%3 == 0)
+		if (setSetSpeed < 1.5 && difficulty%6 == 0)
 			setSetSpeed += 0.25
 		
 		// Enemy health
