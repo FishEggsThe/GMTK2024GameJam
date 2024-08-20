@@ -8,7 +8,7 @@ placementIndex = -1
 	
 file = noone
 var filename = "highscores.txt"
-//file_delete("pleasedontopen.txt")
+//file_delete(filename)
 
 show_debug_message(file_exists(filename))
 if !file_exists(filename) {

@@ -1,0 +1,1 @@
+DrawGregText(string_copy(global.fontContains, image_index+1, 1), x, y, image_xscale, fa_center, fa_middle)
