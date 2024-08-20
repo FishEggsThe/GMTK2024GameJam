@@ -8,16 +8,17 @@ placementIndex = -1
 	
 file = noone
 var filename = "highscores.txt"
-file_delete(filename)
+//file_delete("pleasedontopen.txt")
 
 show_debug_message(file_exists(filename))
 if !file_exists(filename) {
 	file = file_text_open_write(filename)
+	//show_message(filename)
 	var highScoresString = "FSH$50000\n"
 		highScoresString +="IAN$40000\n"
 		highScoresString +="!?#$1"
 	file_text_write_string(file, highScoresString)
-	//file_text_close(file)
+	file_text_close(file)
 }
 
 //show_debug_message(game_save_id)
