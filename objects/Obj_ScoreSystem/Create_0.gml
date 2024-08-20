@@ -16,9 +16,9 @@ show_debug_message(file_exists(filename))
 if !file_exists(filename) {
 	file = file_text_open_write(filename)
 	//show_message(filename)
-	var highScoresString = "FSH$50000\n"
-		highScoresString +="IAN$40000\n"
-		highScoresString +="!?#$1"
+	var highScoresString = "IAN$30000\n"
+		highScoresString +="EGG$20000\n"
+		highScoresString +="GRG$10000"
 	file_text_write_string(file, highScoresString)
 	file_text_write_string(file, "\n" + importantNote)
 	file_text_close(file)
