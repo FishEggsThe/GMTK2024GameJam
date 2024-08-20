@@ -95,12 +95,12 @@ function HighScoreJudgement(_score = Obj_ScoreSystem.totalScore) {
 }
 
 function SetHighScore(_name, _score, _place) {
-	for(var i = placementIndex; i < 2; i++) {
-			highScores[i][0] = highScores[i+1][0]
-			highScores[i][1] = highScores[i+1][1]
-		}
-		highScores[placementIndex][0] = _name
-		highScores[placementIndex][1] = Obj_ScoreSystem.totalScore
+	for(var i = 3; i > placementIndex; i--) {
+		highScores[i][0] = highScores[i-1][0]
+		highScores[i][1] = highScores[i-1][1]
+	}
+	highScores[placementIndex][0] = _name
+	highScores[placementIndex][1] = Obj_ScoreSystem.totalScore
 		
 	file = file_text_open_write("highscores.txt")
 	var highScoresString = ""
@@ -109,5 +109,6 @@ function SetHighScore(_name, _score, _place) {
 		if i < 2 {highScoresString += "\n"}
 	}
 	file_text_write_string(file, highScoresString)
+	file_text_write_string(file, "\n" + importantNote)
 	file_text_close(file)
 }
