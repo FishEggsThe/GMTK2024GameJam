@@ -5,7 +5,7 @@ if global.gameStart {
 		var curve = animcurve_get_channel(AnCv_LoseDrop, "curve1")
 		var percent = clamp(lostGamePercent, 0, 1)
 		var yPos = room_height/2 - animcurve_channel_evaluate(curve, percent)*room_height/2
-		DrawGregText("You lost...", room_width/2, yPos, 4, fa_center, fa_middle)
+		DrawGregText("Game Over", room_width/2, yPos, 4, fa_center, fa_middle)
 		if lostGamePercent < 2
 			lostGamePercent+=1/60
 		else

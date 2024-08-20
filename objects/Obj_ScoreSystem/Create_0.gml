@@ -8,9 +8,10 @@ placementIndex = -1
 importantNote = "Pretty please don't mess with this with a cherry on top 3:"
 	
 file = noone
-var filename = program_directory + "highscores.txt"
+var directory = program_directory
+var filename = directory + "highscores.txt"
 //file_delete(filename)
-show_debug_message(program_directory)
+show_debug_message(directory)
 show_debug_message(file_exists(filename))
 if !file_exists(filename) {
 	file = file_text_open_write(filename)
