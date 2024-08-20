@@ -10,12 +10,14 @@ if juiceFrame > 17 {juiceFrame-=17}
 var juiceAmount = juice/maxJuice
 var juiceHeight = sprite_get_height(Spr_Juice)
 var yJuicePos = room_height-320 + juiceHeight-juiceHeight*juiceAmount
-draw_sprite(Spr_Juice, juiceFrame, 200+5, room_height-30+5)
-draw_sprite(Spr_Juice, juiceFrame, 200, room_height-30)
+
 draw_set_color(c_black)//#2B0C30
-draw_rectangle(163, room_height-320, 235+5, yJuicePos+5, false)
+draw_rectangle(200+5-sprite_get_width(Spr_JuiceMeter)/2, room_height-30+10, 
+200+5+sprite_get_width(Spr_JuiceMeter)/2, room_height-30+10-juiceHeight, false)
+
+draw_sprite(Spr_Juice, juiceFrame, 200, room_height-30)
 draw_set_color(#1E1E1E)//#2B0C30
-draw_rectangle(163, room_height-320, 235, yJuicePos, false)
+draw_rectangle(163, room_height-320, 240, yJuicePos, false)
 
 //var yJuicePos = room_height-320 + juiceHeight*juiceAmount
 //var color = choose(#63AB3F, #0098DB, #C00946, #FFC200, #9D5618, #FF5277)
@@ -26,7 +28,6 @@ draw_rectangle(163, room_height-320, 235, yJuicePos, false)
 //					juiceHeight*juiceAmount, 2.25, 90, color, 1)
 //}
 
-draw_sprite_ext(Spr_JuiceMeter, 0, 200+5, room_height-30+5, 1, 1, 0, c_black, 1)
 draw_sprite(Spr_JuiceMeter, 0, 200, room_height-30)
 
 // Lives
