@@ -13,7 +13,7 @@ if global.debug {
 
 if global.gameStart {
 	// The object had visible set to false, fuck me
-	DrawGregText("Round:", room_width-5, 5, 3, fa_right)
-	DrawGregText(difficulty, room_width-5, 5+3*(global.fontHeight+3), 3, fa_right)
+	DrawGregText("Round: " + string(difficulty), room_width-5, 5, 3, fa_right)
+	//DrawGregText(difficulty, room_width-5, 5+3*(global.fontHeight+3), 3, fa_right)
 	//DrawGregText("Round: " + string(difficulty), room_width-5, 5, 3, fa_right, fa_top)
 }

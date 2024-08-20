@@ -17,7 +17,7 @@ if global.debug {
 
 if global.gameStart {
 	if (global.lostGame && !Obj_ScoreSystem.setHighScoreName) {
-		if keyboard_check_pressed(ord("R")) {
+		if keyboard_check_pressed(vk_space) {
 			audio_play_sound(Snd_ButtonPress, 0, false)
 			room_goto(room)
 		}
