@@ -122,6 +122,8 @@
     {"id":{"name":"Spr_SuperBall","path":"sprites/Spr_SuperBall/Spr_SuperBall.yy",},},
     {"id":{"name":"Spr_SuperLaser","path":"sprites/Spr_SuperLaser/Spr_SuperLaser.yy",},},
     {"id":{"name":"Spr_Surprise","path":"sprites/Spr_Surprise/Spr_Surprise.yy",},},
+    {"id":{"name":"Spr_Title","path":"sprites/Spr_Title/Spr_Title.yy",},},
+    {"id":{"name":"Spr_Tutorials","path":"sprites/Spr_Tutorials/Spr_Tutorials.yy",},},
     {"id":{"name":"Spr_Wall","path":"sprites/Spr_Wall/Spr_Wall.yy",},},
   ],
   "resourceType":"GMProject",
