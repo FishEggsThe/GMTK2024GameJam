@@ -6,6 +6,7 @@ function TakeLife(){
 }
 
 function StartFlyAway() {
+	audio_play_sound(Snd_StealLunch, 5, false)
 	moveSpeed *= -1
 	moveSpeedInc = -0.3
 	gotLunch = true

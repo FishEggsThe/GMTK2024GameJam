@@ -89,6 +89,7 @@
     {"id":{"name":"Snd_Lose","path":"sounds/Snd_Lose/Snd_Lose.yy",},},
     {"id":{"name":"Snd_Merge","path":"sounds/Snd_Merge/Snd_Merge.yy",},},
     {"id":{"name":"Snd_Shoot","path":"sounds/Snd_Shoot/Snd_Shoot.yy",},},
+    {"id":{"name":"Snd_StealLunch","path":"sounds/Snd_StealLunch/Snd_StealLunch.yy",},},
     {"id":{"name":"chives","path":"sprites/chives/chives.yy",},},
     {"id":{"name":"hi","path":"sprites/hi/hi.yy",},},
     {"id":{"name":"mockup","path":"sprites/mockup/mockup.yy",},},
