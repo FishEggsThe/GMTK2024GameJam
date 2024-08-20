@@ -102,7 +102,7 @@ function SetHighScore(_name, _score, _place) {
 		highScores[placementIndex][0] = _name
 		highScores[placementIndex][1] = Obj_ScoreSystem.totalScore
 		
-	file = file_text_open_write("dontopenplease.txt")
+	file = file_text_open_write("highscores.txt")
 	var highScoresString = ""
 	for(var i = 0; i < 3; i++) {
 		highScoresString += highScores[i][0] + "$" + string(highScores[i][1])

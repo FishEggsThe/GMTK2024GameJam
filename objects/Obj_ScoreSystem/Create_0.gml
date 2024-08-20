@@ -7,12 +7,12 @@ setHighScoreName = false
 placementIndex = -1
 	
 file = noone
-var filename = "dontopenplease.txt"
+var filename = "highscores.txt"
 file_delete(filename)
 
-show_debug_message(file_exists("dontopenplease.txt"))
-if !file_exists("dontopenplease.txt") {
-	file = file_text_open_write("dontopenplease.txt")
+show_debug_message(file_exists(filename))
+if !file_exists(filename) {
+	file = file_text_open_write(filename)
 	var highScoresString = "FSH$50000\n"
 		highScoresString +="IAN$40000\n"
 		highScoresString +="!?#$1"
@@ -21,7 +21,7 @@ if !file_exists("dontopenplease.txt") {
 }
 
 //show_debug_message(game_save_id)
-file = file_text_open_read("dontopenplease.txt")
+file = file_text_open_read(filename)
 for(var i = 0; i < 3; i++) {
 	highScores[i] = array_create(2, noone)
 	var highScore = string_split(file_text_read_string(file), "$")
