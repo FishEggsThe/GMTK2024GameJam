@@ -59,7 +59,7 @@ function DrawGregText(_string, _x, _y, _size = 3, _halign = fa_left, _valign = f
 		}
 		if characterIndex > -1 {
 			if _outline
-				draw_sprite_ext(global.fontSprite, characterIndex, _x+xOffset+_size*2, _y+yOffset+_size*2, 
+				draw_sprite_ext(global.fontSprite, characterIndex, _x+xOffset+5, _y+yOffset+5, 
 								_size, _size, 0, c_black, 1)
 			
 			draw_sprite_ext(global.fontSprite, characterIndex, _x+xOffset, _y+yOffset, 
