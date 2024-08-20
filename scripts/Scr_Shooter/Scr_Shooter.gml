@@ -1,4 +1,5 @@
 function ShootBall(_xPos, _yPos, _speed, _type, _angle) {
+	audio_play_sound(Snd_Shoot, 0, false)
 	var ball = noone
 	if _type == global.numOfBallTypes {
 		ball = instance_create_layer(x, y, "Instances", Obj_SuperBall)
@@ -29,6 +30,7 @@ function CycleQueue() {
 	ballQueue[ballQueueSize-1] = irandom(global.numOfBallTypes-1)
 	
 	if juice >= maxJuice && !givenJuicedBall {
+		audio_play_sound(Snd_JuiceReady, 4, false)
 		givenJuicedBall = true
 		ballQueue[ballQueueSize-1] = global.numOfBallTypes
 	}

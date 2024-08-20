@@ -18,6 +18,7 @@ function LoseGame() {
 		instance_create_layer(x+16,y-48,"Particles",obj_shock);
 	}
 	global.lostGame = true
+	audio_play_sound(Snd_Lose, 5, false)
 	HighScoreJudgement(Obj_ScoreSystem.totalScore)
 	AddScreenShake(4)
 }

@@ -37,6 +37,11 @@ function DrawExplosion() {
 
 function CauseExplosion(_ball){
 	with instance_create_layer(x, y, "Particles", Obj_Explosion) {
+		if _ball.tier >= 3 {
+			audio_play_sound(Snd_Explode3, 3, false)
+		} else {
+			audio_play_sound(choose(Snd_Explode1, Snd_Explode2), 3, false)
+		}
 		blastType = _ball.type
 		blastReach = 175 + 250*(_ball.tier-1)
 		blastDirections = _ball.explosionDirections

@@ -130,6 +130,7 @@ function MergeBalls(_ball, _targetBall) {
 		//_targetBall.tier = 3
 		ExplodeBall(_targetBall)
 	} else {
+		audio_play_sound(Snd_Merge, 3, false)
 		_targetBall.maxMoveSpeed -= 10//maxMoveSpeed/3
 		_targetBall.mask_index = global.ballSprites[tier-1]
 		_targetBall.flash = setFlash
