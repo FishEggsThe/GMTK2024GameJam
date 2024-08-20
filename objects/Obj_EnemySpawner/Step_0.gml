@@ -65,7 +65,7 @@ if !global.lostGame {
 			setSetSpeed += 0.25
 		
 		// Enemy health
-		if (setHp < 10 && difficulty%3 == 0)
+		if (setHp < 10 && difficulty%6 == 0)
 			setHp++
 			
 		// Enemy Pool
