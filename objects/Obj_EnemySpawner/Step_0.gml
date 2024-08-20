@@ -17,8 +17,12 @@ if !global.lostGame {
 			var enemySpawned = instance_create_layer(random_range(270+offset, 810-offset), -offset, "Instances", enemyToSpawn)
 			with enemySpawned {
 				var isBig = (object_index == Obj_EnemyBig)
-				moveSpeed = Obj_EnemySpawner.setSpeed / 2*isBig
-				hp = round(Obj_EnemySpawner.setHp * (2+1/3)*isBig)
+				moveSpeed = Obj_EnemySpawner.setSpeed
+				hp = Obj_EnemySpawner.setHp
+				if isBig {
+					moveSpeed /= 2
+					hp = round(hp * (2+1/3))
+				}
 				
 			}
 			

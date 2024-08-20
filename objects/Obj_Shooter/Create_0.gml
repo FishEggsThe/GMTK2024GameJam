@@ -13,7 +13,7 @@ canPower = false
 shotDelay = 5
 reversePower = false
 
-juice = 100
+juice = 0
 maxJuice = 100
 givenJuicedBall = false
 juiceFrame = 0
