@@ -1,6 +1,7 @@
 if global.debug {
 	draw_text_color(5, 5, "debug mode", c_lime, c_lime, c_green, c_green, 1)
-	draw_text_color(room_width-275, 5, instance_number(Obj_Ball), c_lime, c_lime, c_green, c_green, 1)
+	DrawGregText(instance_number(Obj_Ball), room_width-275, 5, 3)
+	DrawGregText(Obj_Shooter.overheat, room_width-275, 75, 3)
 }
 
 if global.gameStart {

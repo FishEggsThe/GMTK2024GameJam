@@ -15,6 +15,7 @@ if (global.gameStart && !global.allowRestart) {
 	armExtend = clamp(sqrt(power((mouse_x-x),2)+power((mouse_y-y),2))/150,0.5,1.5)
 	draw_sprite_ext(armSprite, 0, xPos+5, yPos+5, armExtend, 1, shootAngle, c_black, 1)
 	draw_sprite_ext(armSprite, 0, xPos, yPos, armExtend, 1, shootAngle, c_white, 1)
+	draw_sprite_ext(armSprite, 0, xPos, yPos, armExtend, 1, shootAngle, c_red, overheat/maxOverheat*0.9)
 	
 	if recoil > 0 {recoil--}
 }

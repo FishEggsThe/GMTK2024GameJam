@@ -20,38 +20,48 @@ if !global.lostGame {
 		}
 	}
 	
-	if (canShoot && shootPressedInput) {canPower = true; SetCursor(1)}
+	if !enableOverheat {
+		if (canShoot && shootPressedInput) {canPower = true; SetCursor(1)}
 
-	if canPower {
-		if reversePower
-			shotPower -= shotPowerMax/60
-		else 
-			shotPower += shotPowerMax/60
+		if canPower {
+			if reversePower
+				shotPower -= shotPowerMax/60
+			else 
+				shotPower += shotPowerMax/60
 	
-	}
-	if shotPower >= shotPowerMax or shotPower < 0
-		reversePower = !reversePower
+		}
+		if shotPower >= shotPowerMax or shotPower < 0
+			reversePower = !reversePower
 
-	if (shootReleaseInput && canPower) {
-		recoil = setRecoil
-		var trueShotPower = clamp(shotPower, shotPowerMin, shotPowerTrueMax)
+		if (shootReleaseInput && canPower) {
+			recoil = setRecoil
+			overheat += overheatInc
+			var trueShotPower = clamp(shotPower, shotPowerMin, shotPowerTrueMax)
 		
-		// I fucking despise all of you
-		var armExtend = clamp(sqrt(power((mouse_x-x),2)+power((mouse_y-y),2))/150,0.5,1.5)
-		var xVector = cos(degtorad(shootAngle))
-		var yVector = -sin(degtorad(shootAngle))
-		var armDist = sprite_get_width(armSprite)*armExtend
-		var xArmDist = x + xVector*armDist
-		var yArmDist = y + yVector*armDist
-		repeat(10)
-			instance_create_layer(xArmDist, yArmDist, "Particles", obj_stardust)
+			// I fucking despise all of you
+			var armExtend = clamp(sqrt(power((mouse_x-x),2)+power((mouse_y-y),2))/150,0.5,1.5)
+			var xVector = cos(degtorad(shootAngle))
+			var yVector = -sin(degtorad(shootAngle))
+			var armDist = sprite_get_width(armSprite)*armExtend
+			var xArmDist = x + xVector*armDist
+			var yArmDist = y + yVector*armDist
+			repeat(10)
+				instance_create_layer(xArmDist, yArmDist, "Particles", obj_stardust)
 		
-		ShootBall(xArmDist*7/8, xArmDist*7/8, trueShotPower, ballQueue[0], shootAngle)
-		shotPower = 0
-		canPower = false
-		canShoot = false
-		alarm[0] = shotDelay
-		SetCursor(0)
+			ShootBall(xArmDist*7/8, xArmDist*7/8, trueShotPower, ballQueue[0], shootAngle)
+			shotPower = 0
+			canPower = false
+			canShoot = false
+			alarm[0] = shotDelay
+			SetCursor(0)
+		}
 	}
+	
+	if overheat > maxOverheat {
+		enableOverheat = true
+	}
+	
+	if overheat > 0 {overheat -= overheatDec}
+	else {enableOverheat = false}
 }
 
