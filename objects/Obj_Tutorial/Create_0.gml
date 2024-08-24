@@ -1,6 +1,7 @@
 pageTexts = [
 "YOU GOT SOME PRETTY \nFOOD TODAY, BUT IT \nSEEMS THAT THE OWNERS \nOF THAT FOOD AREN'T \nREALLY HAPPY ABOUT \nTHAT!",
 "USE THE LEFT MOUSE \nBUTTON TO AIM AND \nCHARGE A BALL INTO \nYOUR DESIRED DIRECTION",
+"BE CAREFUL WHEN \nSHOOTING TOO FAST OR \nELSE YOU'LL BE STUCK \nCOOLING DOWN YOUR ARM",
 "BALLS OF THE SAME TYPE \nMERGE WHEN COLLIDED",
 "WHEN THE ULTRA METER \nIS FILLED, AN ULTRA \nBALL IS ADDED TO THE \nQUEUE. HANDLE WITH \nCAUTION",
 "PRESSING THE SPACE BAR \nPUTS THE NEXT BALL \nINTO STORAGE. STORED \nBALLS CAN BE SWAPPED \nBACK LATER",
@@ -17,6 +18,6 @@ x = room_width/2
 y -= 3*(global.fontHeight+3)
 
 leftArrow = instance_create_layer(x-65, y-10, "Instances", Obj_TutorialArrow)
-with leftArrow {nextPage = -1; image_xscale *= -1}
+with leftArrow {nextPage = -1; image_xscale *= -1; input = "A"}
 rightArrow = instance_create_layer(x+65, y-10, "Instances", Obj_TutorialArrow)
 //with rightArrow {nextPage = -1; image_xscale *= -1}

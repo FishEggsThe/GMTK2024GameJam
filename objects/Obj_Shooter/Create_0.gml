@@ -16,7 +16,7 @@ shotDelay = 5
 reversePower = false
 
 overheat = 0
-overheatInc = 10
+overheatInc = 20
 overheatDec = 0.25
 maxOverheat = 100
 enableOverheat = false
