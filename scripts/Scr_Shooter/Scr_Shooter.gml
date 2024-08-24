@@ -27,6 +27,7 @@ function ShootBall(_xPos, _yPos, _speed, _type, _angle) {
 function CycleQueue() {
 	for(var i = 0; i < ballQueueSize-1; i++)
 		ballQueue[i] = ballQueue[i+1]
+	//var 
 	ballQueue[ballQueueSize-1] = irandom(global.numOfBallTypes-1)
 	
 	if juice >= maxJuice && !givenJuicedBall {

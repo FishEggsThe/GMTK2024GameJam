@@ -15,6 +15,7 @@ if global.gameStart {
 			DrawGregText("Press 'Space' to Restart", room_width/2, room_height/2+(global.fontHeight+3)*2, 2, fa_center)
 	}
 } else {
+	draw_sprite_ext(Spr_Title, 0, room_width/2+5, room_height/4+5, 2, 2, 0, c_black, 1)
 	draw_sprite_ext(Spr_Title, 0, room_width/2, room_height/4, 2, 2, 0, c_white, 1)
 	//DrawGregText("Buster Balls", room_width/2, room_height/4, 5, fa_center, fa_middle)
 	//var text = "Click left mouse to Play\nPress 'F' to change cursor size"
