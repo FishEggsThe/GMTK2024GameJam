@@ -61,7 +61,7 @@ if !global.lostGame {
 		enableOverheat = true
 	}
 	
-	if overheat > 0 {overheat -= overheatDec}
+	if overheat > 0 {overheat -= (overheatDec*(1+!enableOverheat))}
 	else {enableOverheat = false}
 }
 
