@@ -9,3 +9,5 @@ if moveSpeed > 0 {
 if flash > 0 {flash--}
 
 if place_meeting(x, y, Obj_Enemy) {ExplodeBall()}
+
+if instance_number(Obj_Ball) > 10 {instance_destroy()}
