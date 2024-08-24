@@ -1,5 +1,7 @@
 ## [Check out the game's Itch.io page here](https://ianboni.itch.io/ball-buster)
 
+##### Edit: The current version of this repository contains an updated version of this game that is not accurate to the version released for the game jam
+
 # Ball Buster
 This was a game created by me and Ian Boni (@IanBoni_ on Twitter/X) during the Game Maker's Tool Kit 2024 Game Jam event which lasted from August 15-20th.
 
