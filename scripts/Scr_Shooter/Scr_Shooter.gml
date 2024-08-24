@@ -28,7 +28,7 @@ function CycleQueue() {
 	var lastBall = ballQueue[ballQueueSize-1]
 	var duplicateChance = 0
 	
-	if lastBall == global.numOfBallTypes {
+	if lastBall != global.numOfBallTypes {
 		duplicateChance = 0.5
 		for(var i = ballQueueSize-2; i > 0; i--) {
 			if ballQueue[i] == lastBall {duplicateChance/=3}
