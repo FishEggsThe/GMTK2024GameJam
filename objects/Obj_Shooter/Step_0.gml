@@ -33,6 +33,7 @@ if !global.lostGame {
 		reversePower = !reversePower
 
 	if (shootReleaseInput && canPower) {
+		recoil = setRecoil
 		var trueShotPower = clamp(shotPower, shotPowerMin, shotPowerTrueMax)
 		
 		// I fucking despise all of you
