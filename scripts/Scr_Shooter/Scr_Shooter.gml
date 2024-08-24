@@ -34,6 +34,7 @@ function CycleQueue() {
 			if ballQueue[i] == lastBall {duplicateChance/=3}
 			else {break}
 		}
+	}
 	
 	for(var i = 0; i < ballQueueSize-1; i++)
 		ballQueue[i] = ballQueue[i+1]
