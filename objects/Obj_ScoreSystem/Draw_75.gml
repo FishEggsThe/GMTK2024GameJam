@@ -7,7 +7,7 @@ if !global.gameStart {
 		DrawGregText(playerScore, room_width/2, yOffset, size, fa_center)
 		DrawGregText(playerName, room_width/2, yOffset+3, size, fa_center, fa_bottom)
 	}
-} else if !instance_exists(Obj_Transition) {
+} else {
 	DrawGregText("Score: \n" + string(totalScore), 5, 5, 3)
 }
 
