@@ -19,7 +19,7 @@ if global.gameStart {
 	if (global.lostGame && !Obj_ScoreSystem.setHighScoreName) {
 		if keyboard_check_pressed(vk_space) {
 			audio_play_sound(Snd_ButtonPress, 0, false)
-			room_goto(room)
+			ScreenTransition(function() {room_goto(room)}, 1)
 		}
 	}
 } else {
@@ -29,15 +29,18 @@ if global.gameStart {
 	}
 	if keyboard_check_pressed(vk_space) {
 		audio_play_sound(Snd_ButtonPress, 0, false)
-		room_goto(Rm_Tutorial)
+		var transition = function() {room_goto(Rm_Tutorial)}
+		ScreenTransition(transition)
 	}
 	
 	if keyboard_check_pressed(ord("E")) {
 		audio_play_sound(Snd_ButtonPress, 0, false)
-		audio_stop_sound(Msc_Menu)
-		audio_play_sound(Msc_Game, 0, true)
-		global.gameStart = true
-		Obj_Shooter.alarm[0] = 1
-		layer_background_destroy(layer_background_get_id("Background_Grid"))
+		ScreenTransition(function() {
+			audio_stop_sound(Msc_Menu)
+			audio_play_sound(Msc_Game, 0, true)
+			global.gameStart = true
+			Obj_Shooter.alarm[0] = 1
+			layer_background_destroy(layer_background_get_id("Background_Grid"))
+		}, true)
 	}
 }

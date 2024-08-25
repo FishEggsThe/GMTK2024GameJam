@@ -11,7 +11,7 @@ if global.debug {
 	DrawGregText(roundStats, 5, 100)
 }
 
-if global.gameStart {
+if global.gameStart && !instance_exists(Obj_Transition) {
 	// The object had visible set to false, fuck me
 	DrawGregText("Round: " + string(difficulty), room_width-5, 5, 3, fa_right)
 	//DrawGregText(difficulty, room_width-5, 5+3*(global.fontHeight+3), 3, fa_right)

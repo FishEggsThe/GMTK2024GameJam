@@ -7,11 +7,11 @@ if !global.gameStart {
 		DrawGregText(playerScore, room_width/2, yOffset, size, fa_center)
 		DrawGregText(playerName, room_width/2, yOffset+3, size, fa_center, fa_bottom)
 	}
-} else {
+} else if !instance_exists(Obj_Transition) {
 	DrawGregText("Score: \n" + string(totalScore), 5, 5, 3)
 }
 
-if newHighScore {
+if newHighScore && !instance_exists(Obj_Transition) {
 	DrawGregText("NEW HIGH SCORE!!!", 5, 5+5*(global.fontHeight+6), 4)
 	if setHighScoreName {
 		DrawGregText("You are winner!!", room_width/2, room_height*3/8-60, 3, fa_center, fa_middle)
